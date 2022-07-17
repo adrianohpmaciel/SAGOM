@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qaZ6xpikJVq5ch7Iz2/BwkhdzCOePJKVkCqPjS+BIqooTHiuuS41IylQO9lgWWnNOmadMxOV6BqmCbxCDFI5gg==",
+  "dgSpecHash": "kZo7MLl9RdHR+yuTnRUUT/PgFWBz+6b8h5ygqGIoBEA2BqrUCkghXgINAr2X5HHH8hq2Face8OHOEeZhVHPY5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.Domain.Tests\\SAGOM.Domain.Tests.csproj",
+  "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain.Tests\\SAGOM.Domain.Tests.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

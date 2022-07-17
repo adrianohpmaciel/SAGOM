@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Domain.Entities
 {
-    public sealed class Role
+    public sealed class Employee
     {
         public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string Description { get; private set; }
+        public Role Role { get; private set; }
+        public Person Person { get; private set; }
+        public double Salary { get; private set; }
+
     }
 }

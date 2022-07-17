@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NQmDpzb8DWGq7dhyKRolALDSSIiEvim/hNFX8bjA1wv7HyCY9SvRa2mP3ZmJvNklGAkGBGxZJyHw97+Q/atcOQ==",
+  "dgSpecHash": "swyxVB8+Kuaj1djLYdpzzal1AUDeCbnJ9R+7AXUcO7JHIjJ94dDg43EGcVAFKKp2n1lcmNhpWYrRcjTEDyOfAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.API\\SAGOM.API.csproj",
+  "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.API\\SAGOM.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

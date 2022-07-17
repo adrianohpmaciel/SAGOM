@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Domain.Entities
 {
-    internal class Company
+    public sealed class Company
     {
+        public string Cnpj { get; private set; }
+        public string FantasyName { get; private set; }
+        public string Address { get; private set; }
+        public string Telephone { get; private set; }
+
     }
 }

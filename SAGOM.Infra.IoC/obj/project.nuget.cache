@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t+3PgLykPKyzJBTJlCWT7iOH4pS4KARuQc568uCxoVXomcHbRD1OXk4cMX+B7D8WXAzclEm7uzm6OXZ2o3dWDA==",
+  "dgSpecHash": "qOk6hIhDrlgc7fAjuWXLB/CV1Qt3XIrjiY+cytp1goAft4aEy3QNb1CaoxOTcFdsxN4T6luPxKDSpZDYfRF9JA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj",
+  "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

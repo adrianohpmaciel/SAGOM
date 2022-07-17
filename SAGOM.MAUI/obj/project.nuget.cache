@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fs+fApuQD9+Zag6kcFqSzAJlp8rvTIsnJHomReKyZbreCGcPB8aDKYVqgxfY5ouF+GylEOQmKbMhRzkqWNFCpg==",
+  "dgSpecHash": "UII6lLH1dvVQ170RzBu81O6dv59J7q44+UfqsztOzwpICsiEm/DlrlS/9qGaVG9WLV73NaKpOxSWbzBwkxvEpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\SAGOM.MAUI.csproj",
+  "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\SAGOM.MAUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",
