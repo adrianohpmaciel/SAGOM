@@ -14,6 +14,15 @@ namespace SAGOM.Domain.Entities
         public int Quantity { get; private set; }
         public double UnitValue { get; private set; }
 
+        public Product(int id, string name, string description, int quantity, double unitValue)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            Quantity = quantity;
+            UnitValue = unitValue;
+        }
+
         public double GetTotal()
         {
             return UnitValue * Quantity;

@@ -12,5 +12,13 @@ namespace SAGOM.Domain.Entities
         public string Name { get; private set; }
         public string Description { get; private set; }
         public double Value { get; private set; }
+
+        public Service(int id, string name, string description, double value)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            Value = value;
+        }
     }
 }

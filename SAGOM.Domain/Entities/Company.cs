@@ -13,5 +13,12 @@ namespace SAGOM.Domain.Entities
         public string Address { get; private set; }
         public string Telephone { get; private set; }
 
+        public Company (string cnpj, string fantasyName, string address, string telephone)
+        {
+            Cnpj = cnpj;
+            FantasyName = fantasyName;
+            Address = address;
+            Telephone = telephone;
+        }
     }
 }

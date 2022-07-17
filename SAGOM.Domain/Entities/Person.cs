@@ -12,5 +12,14 @@ namespace SAGOM.Domain.Entities
         public string FullName { get; private set; }
         public string Address { get; private set; }
         public string CellPhone { get; private set; }
+
+        public Person(string cpf, string fullName, string address, string cellPhone)
+        {
+            Cpf = cpf;
+            FullName = fullName;
+            Address = address;
+            CellPhone = cellPhone;
+        }
     }
+
 }

@@ -10,7 +10,13 @@ namespace SAGOM.Domain.Entities
     {
         public int Id { get; private set; }
         public Person Person { get; private set; }
-        public ICollection<Vehicle> Vehicles { get; private set; }        
+        public ICollection<Vehicle> Vehicles { get; private set; }
 
+        public Client(int id, Person person, ICollection<Vehicle> vehicles)
+        {
+            Id = id;
+            Person = person;
+            Vehicles = vehicles;
+        }   
     }
 }

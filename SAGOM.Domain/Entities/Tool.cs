@@ -17,5 +17,16 @@ namespace SAGOM.Domain.Entities
         public string Status { get; private set; }
         public Employee Responsible { get; private set; }
 
+        public Tool(int id, string name, string description, string value, DateTime purchaseDate, DateTime discardDate, string status, Employee responsible)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            Value = value;
+            PurchaseDate = purchaseDate;
+            DiscardDate = discardDate;
+            Status = status;
+            Responsible = responsible;
+        }
     }
 }

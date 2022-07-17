@@ -13,5 +13,12 @@ namespace SAGOM.Domain.Entities
         public Person Person { get; private set; }
         public double Salary { get; private set; }
 
+        public Employee (int id, Role role, Person person, double salary)
+        {
+            Id = id;
+            Role = role;
+            Person = person;
+            Salary = salary;
+        }   
     }
 }
