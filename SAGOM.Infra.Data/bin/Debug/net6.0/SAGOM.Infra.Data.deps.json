@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SAGOM.Infra.Data/1.0.0": {
+        "dependencies": {
+          "SAGOM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SAGOM.Infra.Data.dll": {}
+        }
+      },
+      "SAGOM.Domain/1.0.0": {
+        "runtime": {
+          "SAGOM.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SAGOM.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SAGOM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

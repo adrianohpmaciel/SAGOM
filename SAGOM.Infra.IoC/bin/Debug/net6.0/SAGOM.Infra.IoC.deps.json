@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SAGOM.Infra.IoC/1.0.0": {
+        "dependencies": {
+          "SAGOM.Application": "1.0.0",
+          "SAGOM.Domain": "1.0.0",
+          "SAGOM.Infra.Data": "1.0.0"
+        },
+        "runtime": {
+          "SAGOM.Infra.IoC.dll": {}
+        }
+      },
+      "SAGOM.Application/1.0.0": {
+        "dependencies": {
+          "SAGOM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SAGOM.Application.dll": {}
+        }
+      },
+      "SAGOM.Domain/1.0.0": {
+        "runtime": {
+          "SAGOM.Domain.dll": {}
+        }
+      },
+      "SAGOM.Infra.Data/1.0.0": {
+        "dependencies": {
+          "SAGOM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SAGOM.Infra.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SAGOM.Infra.IoC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SAGOM.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SAGOM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SAGOM.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
