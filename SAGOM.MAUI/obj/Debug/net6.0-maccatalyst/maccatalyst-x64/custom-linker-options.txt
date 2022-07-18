@@ -3,7 +3,7 @@ AreAnyAssembliesTrimmed=false
 				AOTCompiler=
 				AOTOutputDirectory=obj\Debug\net6.0-maccatalyst\maccatalyst-x64\nativelibraries/aot-output/
 				AppBundleManifestPath=bin\Debug\net6.0-maccatalyst\maccatalyst-x64\SAGOM.MAUI.app\Contents/Info.plist
-				CacheDirectory=C:\Users\adria\source\repos\SAGOMMVC\SAGOM.MAUI\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-cache
+				CacheDirectory=C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-cache
 				
 				Debug=true
 				DeploymentTarget=
@@ -179,7 +179,7 @@ FrameworkAssembly=System.Private.CoreLib
 				Interpreter=all
 				IntermediateLinkDir=obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linked\
 				InvariantGlobalization=false
-				ItemsDirectory=C:\Users\adria\source\repos\SAGOMMVC\SAGOM.MAUI\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-items
+				ItemsDirectory=C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=
 				LibMonoLinkMode=dylib

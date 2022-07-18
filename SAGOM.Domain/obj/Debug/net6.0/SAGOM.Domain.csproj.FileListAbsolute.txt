@@ -10,3 +10,15 @@ C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Domain\obj\Debug\net6.0\refint\SAGOM.Domain.dll
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.pdb
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Domain\obj\Debug\net6.0\ref\SAGOM.Domain.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\bin\Debug\net6.0\SAGOM.Domain.deps.json
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\bin\Debug\net6.0\SAGOM.Domain.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\bin\Debug\net6.0\SAGOM.Domain.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.csproj.AssemblyReference.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.AssemblyInfoInputs.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.AssemblyInfo.cs
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\refint\SAGOM.Domain.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\SAGOM.Domain.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\obj\Debug\net6.0\ref\SAGOM.Domain.dll

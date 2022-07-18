@@ -12,7 +12,8 @@ namespace SAGOM.Domain.Validations
 
         public static void When(bool hasError, string error)
         {
-            throw new DomainExceptionValidation(error);
+            if (hasError)
+                throw new DomainExceptionValidation(error);
         }
     }
 }

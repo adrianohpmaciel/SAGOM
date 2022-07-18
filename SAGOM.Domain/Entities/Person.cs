@@ -17,7 +17,7 @@ namespace SAGOM.Domain.Entities
 
         public Person(string cpf, string name, string lastName, string address, string cellPhone)
         {
-            ValidateDomain(cpf, name, lastName, address, cellPhone);
+            ValidateDomain(ref cpf, ref name, ref lastName, ref address, ref cellPhone);
             Cpf = cpf;
             Name = name;
             LastName = name;
@@ -25,58 +25,94 @@ namespace SAGOM.Domain.Entities
             CellPhone = cellPhone;
         }
 
-        private void ValidateDomain(string cpf, string name, string lastName, string address, string cellPhone)
+        private void ValidateDomain(ref string cpf, ref string name, ref string lastName, ref string address, ref string cellPhone)
         {
-            DomainExceptionValidation.When(String.IsNullOrEmpty(cpf), "Invalid CPF. CPF is required");
-            DomainExceptionValidation.When(cpf.Length < 9, "Invalid CPF, too short, minimum 9 characters");
-            DomainExceptionValidation.When(isValidCpf(cpf), "Invalid CPF, verify the inserted value");
+            #region CPF VALIDATION
+            cpf = cpf.Trim();
+            cpf = DomainAttributesValidation.GetOnlyNumbers(cpf);
 
-            DomainExceptionValidation.When(String.IsNullOrEmpty(name), "Invalid Name. Name is required");
-            DomainExceptionValidation.When(name.Length < 3, "Invalid Name, too short, minimum 3 characters");
+            bool isInvalidCpf = string.IsNullOrEmpty(cpf);
+            DomainExceptionValidation.When(isInvalidCpf, "Invalid CPF. CPF is required");
 
-            DomainExceptionValidation.When(String.IsNullOrEmpty(lastName), "Invalid LastName. LastName is required");
-            DomainExceptionValidation.When(lastName.Length < 3, "Invalid LastName, too short, minimum 3 characters");
+            isInvalidCpf = cpf.Length < 11;
+            DomainExceptionValidation.When(isInvalidCpf, "Invalid CPF. Too short, minimum 11 numbers");
 
-            DomainExceptionValidation.When(String.IsNullOrEmpty(address), "Invalid address. address is required");
-            DomainExceptionValidation.When(address.Length < 3, "Invalid address, too short, minimum 3 characters");
+            isInvalidCpf = ValidateCpf(ref cpf);
+            DomainExceptionValidation.When(isInvalidCpf, "Invalid CPF, verify the inserted value");
+            #endregion
 
-            DomainExceptionValidation.When(String.IsNullOrEmpty(cellPhone), "Invalid cellPhone. address is required");
-            DomainExceptionValidation.When(cellPhone.Length < 12, "Invalid address, too short, minimum 11 characters");
+            #region NAME VALIDATION
+            name = name.Trim();
 
+            bool isInvalidName = String.IsNullOrEmpty(name);
+            DomainExceptionValidation.When(isInvalidName, "Invalid Name. Name is required");
+
+            isInvalidName = name.Length < 3;
+            DomainExceptionValidation.When(isInvalidName, "Invalid Name, too short, minimum 3 chars");
+
+            isInvalidName = !DomainAttributesValidation.IsOnlyLetters(name);
+            DomainExceptionValidation.When(isInvalidName, "Invalid Name. Name cannot contains numbers or symbols");
+            #endregion
+
+            #region LASTNAME VALIDATION
+            lastName = lastName.Trim();
+
+            bool isInvalidLastName = String.IsNullOrEmpty(lastName);
+            DomainExceptionValidation.When( isInvalidLastName, "Invalid LastName. LastName is required");
+
+            isInvalidLastName = lastName.Length < 3;
+            DomainExceptionValidation.When( isInvalidLastName, "Invalid LastName, too short, minimum 3 chars");
+
+            isInvalidLastName = !DomainAttributesValidation.IsOnlyLetters(lastName);
+            DomainExceptionValidation.When( isInvalidLastName, "Invalid LastName. LastName cannot contains numbers or symbols");
+            #endregion
+
+            #region ADDRESS VALIDATION
+            address = address.Trim();
+
+            bool isInvalidAddress = String.IsNullOrEmpty(address);
+            DomainExceptionValidation.When(isInvalidAddress, "Invalid address. address is required");
+
+            isInvalidAddress = address.Length < 3;
+            DomainExceptionValidation.When( isInvalidAddress, "Invalid address, too short, minimum 3 chars");
+            #endregion
+
+            #region CELL PHONE VALIDATION
+            cellPhone = DomainAttributesValidation.GetOnlyNumbers(cellPhone);
+
+            bool isInvalidCellPhone = String.IsNullOrEmpty(cellPhone);
+            DomainExceptionValidation.When(isInvalidCellPhone, "Invalid cellPhone. address is required");
+
+            isInvalidCellPhone = cellPhone.Length < 10;
+            DomainExceptionValidation.When(isInvalidCellPhone, "Invalid cellPhone, too short, minimum 10 numbers");
+            #endregion
         }
 
-        private bool isValidCpf(string cpf)
+        private bool ValidateCpf(ref string cpf)
         {
-            char[] cpfClean = cpf.Replace(".", "").Replace("-", "").Replace("/", "").ToCharArray();
-            char[] cpfDigits = new char[2];
+            char[] cpfChars = cpf.ToCharArray();
+            List<int> cpfNumbers = new List<int>();
 
-            int cpfLength = cpfClean.Length;
-            int cpfSum = 0;
-            int firstDigit;
-            int secondDigit;
-            int testValue;
-
-            if (cpfLength != 11)
-                return false;
-
-            foreach(char c in cpfClean)
+            foreach (char cpfChar in cpfChars)
             {
-                if (int.TryParse(c.ToString(), out testValue) == false)
-                    return false;
+                cpfNumbers.Add(int.Parse(cpfChar.ToString()));
             }
 
-            cpfDigits[0] = cpfClean[9];
-            cpfDigits[1] = cpfClean[10];
-            
+            int firstDigit = int.Parse(cpfNumbers[9].ToString());
+            int secondDigit = int.Parse(cpfNumbers[10].ToString());
+
+            int cpfSum = 0;
+            int firstDigitObtained;
+            int secondDigitObtained;
 
             for (int count = 1; count < 10; count++)
             {
                 cpfSum += cpf[count - 1] * count;
             }
 
-            firstDigit = cpfSum % 11;
+            firstDigitObtained = cpfSum % 11;
 
-            if (firstDigit != cpfDigits[0])
+            if (firstDigitObtained != firstDigit)
                 return false;
 
             for (int count = 1; count < 11; count++)
@@ -84,11 +120,10 @@ namespace SAGOM.Domain.Entities
                 cpfSum += cpf[count - 1] * count - 1;
             }
 
-            secondDigit = cpfSum % 11;
+            secondDigitObtained = cpfSum % 11;
 
-            if (secondDigit != cpfDigits[1])
+            if (secondDigitObtained != secondDigit)
                 return false;
-
 
             return true;
         }

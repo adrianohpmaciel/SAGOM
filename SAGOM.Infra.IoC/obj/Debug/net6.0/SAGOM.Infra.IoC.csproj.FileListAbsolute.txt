@@ -17,3 +17,22 @@ C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infr
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Infra.IoC\obj\Debug\net6.0\refint\SAGOM.Infra.IoC.dll
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.pdb
 C:\Users\adria\source\repos\SAGOMMVC\SAGOM.Infra.IoC\obj\Debug\net6.0\ref\SAGOM.Infra.IoC.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.IoC.deps.json
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.IoC.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.IoC.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Application.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Domain.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.Data.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Application.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Domain.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.Data.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.csproj.AssemblyReference.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.AssemblyInfoInputs.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.AssemblyInfo.cs
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.csproj.CoreCompileInputs.cache
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.csproj.CopyComplete
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\refint\SAGOM.Infra.IoC.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\SAGOM.Infra.IoC.pdb
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\obj\Debug\net6.0\ref\SAGOM.Infra.IoC.dll

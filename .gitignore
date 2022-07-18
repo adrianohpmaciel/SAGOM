@@ -1,6 +1,7 @@
 # Build results
 *.suo
 *.user
+*.zip
 [Pp]ublish/
 **/obj/
 **/Debug/

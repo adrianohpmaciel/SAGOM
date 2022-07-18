@@ -1,1 +1,1 @@
-C:\Users\adria\source\repos\SAGOMMVC\SAGOM.MAUI\SAGOM.MAUI.csproj;x64
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\SAGOM.MAUI.csproj;x64

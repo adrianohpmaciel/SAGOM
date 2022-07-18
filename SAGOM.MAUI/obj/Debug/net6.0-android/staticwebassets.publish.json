@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C8Y54bXUbeNWa/u4KQPrRxMeuEUOr2jdXMsmCjqBoDM=",
+  "Hash": "2TJKniSfgzvWd0GhgxvKk7ZzGgPF+lX4dkUId5mJnnw=",
   "Source": "SAGOM.MAUI",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,17 +10,17 @@
     {
       "Name": "SAGOM.MAUI\\wwwroot",
       "Source": "SAGOM.MAUI",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\SAGOM.MAUI.styles.css",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\SAGOM.MAUI.styles.css",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "SAGOM.MAUI.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\SAGOM.MAUI.styles.css"
+      "OriginalItemSpec": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\bundle\\SAGOM.MAUI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\SAGOM.MAUI.bundle.scp.css",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\SAGOM.MAUI.bundle.scp.css",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "SAGOM.MAUI.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\SAGOM.MAUI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\obj\\Debug\\net6.0-android\\scopedcss\\projectbundle\\SAGOM.MAUI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\app.css",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\favicon.ico",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\index.html",
+      "Identity": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\index.html",
       "SourceId": "SAGOM.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\source\\repos\\SAGOMMVC\\SAGOM.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",
