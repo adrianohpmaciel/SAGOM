@@ -37,7 +37,7 @@ namespace SAGOM.Domain.Entities
             isInvalidCpf = cpf.Length < 11;
             DomainExceptionValidation.When(isInvalidCpf, "Invalid CPF. Too short, minimum 11 numbers");
 
-            isInvalidCpf = ValidateCpf(ref cpf);
+            isInvalidCpf = !ValidateCpf(ref cpf);
             DomainExceptionValidation.When(isInvalidCpf, "Invalid CPF, verify the inserted value");
             #endregion
 
@@ -107,20 +107,23 @@ namespace SAGOM.Domain.Entities
 
             for (int count = 1; count < 10; count++)
             {
-                cpfSum += cpf[count - 1] * count;
+                cpfSum += cpfNumbers[count - 1] * count;
             }
 
             firstDigitObtained = cpfSum % 11;
+            firstDigitObtained = firstDigitObtained == 10 ? 0 : firstDigitObtained;
+            
 
             if (firstDigitObtained != firstDigit)
                 return false;
 
             for (int count = 1; count < 11; count++)
             {
-                cpfSum += cpf[count - 1] * count - 1;
+                cpfSum += cpfNumbers[count - 1] * count - 1;
             }
 
             secondDigitObtained = cpfSum % 11;
+            secondDigitObtained = secondDigitObtained == 10 ? 0 : secondDigitObtained;
 
             if (secondDigitObtained != secondDigit)
                 return false;
