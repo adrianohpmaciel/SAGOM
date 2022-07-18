@@ -11,7 +11,7 @@ namespace SAGOM.Domain.Interfaces
     {
         Task<IEnumerable<Service>> GetServicesAsync();
         Task<IEnumerable<Service>> GetServicesByNameAsync(string name);
-        Task<IEnumerable<Service>> GetServiceByIdAsync(string idService);
+        Task<IEnumerable<Service>> GetServiceByIdAsync(int idService);
         Task<IEnumerable<Service>> CreateAsync(Service service);
         Task<IEnumerable<Service>> UpdateAsync(Service service);
         Task<IEnumerable<Service>> RemoveAsync(Service service);

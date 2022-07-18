@@ -11,7 +11,7 @@ namespace SAGOM.Domain.Interfaces
     {
         Task<IEnumerable<Tool>> GetToolsAsync();
         Task<IEnumerable<Tool>> GetToolsByNameAsync(string name);
-        Task<IEnumerable<Tool>> GetToolByIdAsync(string idTool);
+        Task<IEnumerable<Tool>> GetToolByIdAsync(int idTool);
         Task<IEnumerable<Tool>> CreateAsync(Tool tool);
         Task<IEnumerable<Tool>> UpdateAsync(Tool tool);
         Task<IEnumerable<Tool>> RemoveAsync(Tool tool);
