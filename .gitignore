@@ -1,2 +1,11 @@
-# Ignora arquivos de execução do VS
-.vs
+# Build results
+*.suo
+*.user
+[Pp]ublish/
+**/obj/
+**/Debug/
+**/Release/
+sqlite3/storage.ide
+
+# Visual Studio Code
+.vs/
