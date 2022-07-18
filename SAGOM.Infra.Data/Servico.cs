@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SAGOM.Infra.Data.EntitiesConfiguration
+namespace SAGOM.Infra.Data
 {
     public partial class Servico
     {
@@ -13,7 +13,7 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
         public int Id { get; set; }
         public string Nome { get; set; } = null!;
         public string? Descricao { get; set; }
-        public decimal? Valor { get; set; }
+        public decimal Valor { get; set; }
 
         public virtual ICollection<ServicoOrdemDeServico> ServicoOrdemDeServicos { get; set; }
     }

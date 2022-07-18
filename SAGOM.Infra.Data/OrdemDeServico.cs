@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SAGOM.Infra.Data.EntitiesConfiguration
+namespace SAGOM.Infra.Data
 {
     public partial class OrdemDeServico
     {
@@ -15,8 +15,8 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
         public int? IdAtendimento { get; set; }
         public DateTime Data { get; set; }
         public DateTime? DataUltimaAlteracaoStatus { get; set; }
-        public string? Motivo { get; set; }
-        public string? Status { get; set; }
+        public string Motivo { get; set; } = null!;
+        public string Status { get; set; } = null!;
 
         public virtual Atendimento? IdAtendimentoNavigation { get; set; }
         public virtual ICollection<ProdutoOrdemDeServico> ProdutoOrdemDeServicos { get; set; }

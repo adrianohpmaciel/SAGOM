@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SAGOM.Infra.Data.EntitiesConfiguration
+namespace SAGOM.Infra.Data
 {
     public partial class Veiculo
     {

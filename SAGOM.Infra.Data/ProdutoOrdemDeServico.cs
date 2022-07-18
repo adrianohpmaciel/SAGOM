@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SAGOM.Infra.Data.EntitiesConfiguration
+namespace SAGOM.Infra.Data
 {
-    public partial class ServicoOrdemDeServico
+    public partial class ProdutoOrdemDeServico
     {
         public int Id { get; set; }
-        public int? IdServico { get; set; }
+        public int? IdProduto { get; set; }
         public int? IdOrdemServico { get; set; }
+        public short? Quantidade { get; set; }
 
         public virtual OrdemDeServico? IdOrdemServicoNavigation { get; set; }
-        public virtual Servico? IdServicoNavigation { get; set; }
+        public virtual Produto? IdProdutoNavigation { get; set; }
     }
 }

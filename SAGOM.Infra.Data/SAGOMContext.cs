@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using SAGOM.Infra.Data.EntitiesConfiguration;
 
-namespace SAGOM.Infra.Data.Context
+namespace SAGOM.Infra.Data
 {
     public partial class SAGOMContext : DbContext
     {
@@ -21,9 +20,9 @@ namespace SAGOM.Infra.Data.Context
         public virtual DbSet<Cargo> Cargos { get; set; } = null!;
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Colaborador> Colaboradors { get; set; } = null!;
-        public virtual DbSet<Conta> Conta { get; set; } = null!;
+        public virtual DbSet<Contum> Conta { get; set; } = null!;
         public virtual DbSet<Empresa> Empresas { get; set; } = null!;
-        public virtual DbSet<Ferramenta> Ferramenta { get; set; } = null!;
+        public virtual DbSet<Ferramentum> Ferramenta { get; set; } = null!;
         public virtual DbSet<OrdemDeServico> OrdemDeServicos { get; set; } = null!;
         public virtual DbSet<Pessoa> Pessoas { get; set; } = null!;
         public virtual DbSet<Produto> Produtos { get; set; } = null!;
@@ -36,7 +35,7 @@ namespace SAGOM.Infra.Data.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=LAPTOP-N8EBDQKA;Database = SAGOM; Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-N8EBDQKA; Database=SAGOM; Trusted_Connection=True;");
             }
         }
 
@@ -46,7 +45,10 @@ namespace SAGOM.Infra.Data.Context
             {
                 entity.ToTable("Atendimento");
 
-                entity.HasIndex(e => e.Id, "UQ__Atendime__3213E83E084F92DC")
+                entity.HasIndex(e => e.Id, "UQ__Atendime__3213E83E6040EF8E")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.IdConta, "UQ__Atendime__7546F7149F7CD5DD")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -67,7 +69,9 @@ namespace SAGOM.Infra.Data.Context
 
                 entity.Property(e => e.IdColaborador).HasColumnName("id_colaborador");
 
-                entity.Property(e => e.IdConta).HasColumnName("id_conta");
+                entity.Property(e => e.IdConta)
+                    .IsRequired()
+                    .HasColumnName("id_conta");
 
                 entity.Property(e => e.IdVeiculo).HasColumnName("id_veiculo");
 
@@ -114,10 +118,10 @@ namespace SAGOM.Infra.Data.Context
             {
                 entity.ToTable("Cliente");
 
-                entity.HasIndex(e => e.Id, "UQ__Cliente__3213E83E71AB27F4")
+                entity.HasIndex(e => e.Id, "UQ__Cliente__3213E83E6B372410")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Cpf, "UQ__Cliente__D836E71F075765C8")
+                entity.HasIndex(e => e.Cpf, "UQ__Cliente__D836E71FD1768517")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -127,21 +131,16 @@ namespace SAGOM.Infra.Data.Context
                     .IsUnicode(false)
                     .HasColumnName("cpf")
                     .IsFixedLength();
-
-                entity.HasOne(d => d.CpfNavigation)
-                    .WithOne(p => p.Cliente)
-                    .HasForeignKey<Cliente>(d => d.Cpf)
-                    .HasConstraintName("FK_Cliente.cpf");
             });
 
             modelBuilder.Entity<Colaborador>(entity =>
             {
                 entity.ToTable("Colaborador");
 
-                entity.HasIndex(e => e.Id, "UQ__Colabora__3213E83E9527BBA8")
+                entity.HasIndex(e => e.Id, "UQ__Colabora__3213E83E4DFF785A")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Cpf, "UQ__Colabora__D836E71F3DAD9746")
+                entity.HasIndex(e => e.Cpf, "UQ__Colabora__D836E71FF4211806")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -168,25 +167,16 @@ namespace SAGOM.Infra.Data.Context
                     .WithMany(p => p.Colaboradors)
                     .HasForeignKey(d => d.CnpjEmpresa)
                     .HasConstraintName("FK_Colaborador.cnpj_empresa");
-
-                entity.HasOne(d => d.CpfNavigation)
-                    .WithOne(p => p.Colaborador)
-                    .HasForeignKey<Colaborador>(d => d.Cpf)
-                    .HasConstraintName("FK_Colaborador.cpf");
-
-                entity.HasOne(d => d.IdCargoNavigation)
-                    .WithMany(p => p.Colaboradors)
-                    .HasForeignKey(d => d.IdCargo)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Colaborador.id_cargo");
             });
 
-            modelBuilder.Entity<Conta>(entity =>
+            modelBuilder.Entity<Contum>(entity =>
             {
-                entity.HasIndex(e => e.Id, "UQ__Conta__3213E83E338441C1")
+                entity.HasIndex(e => e.Id, "UQ__Conta__3213E83E6ADB3B1F")
                     .IsUnique();
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("id");
 
                 entity.Property(e => e.CnpjPagante)
                     .HasMaxLength(14)
@@ -235,13 +225,21 @@ namespace SAGOM.Infra.Data.Context
                 entity.HasOne(d => d.CnpjRecebedorNavigation)
                     .WithMany(p => p.Conta)
                     .HasForeignKey(d => d.CnpjRecebedor)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Conta.cnpj_recebedor");
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.Contum)
+                    .HasPrincipalKey<Atendimento>(p => p.IdConta)
+                    .HasForeignKey<Contum>(d => d.Id)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Conta.id");
             });
 
             modelBuilder.Entity<Empresa>(entity =>
             {
                 entity.HasKey(e => e.Cnpj)
-                    .HasName("PK__Empresa__35BD3E49439F8317");
+                    .HasName("PK__Empresa__35BD3E49F0F28EE6");
 
                 entity.ToTable("Empresa");
 
@@ -267,9 +265,9 @@ namespace SAGOM.Infra.Data.Context
                     .HasColumnName("telefone");
             });
 
-            modelBuilder.Entity<Ferramenta>(entity =>
+            modelBuilder.Entity<Ferramentum>(entity =>
             {
-                entity.HasIndex(e => e.Id, "UQ__Ferramen__3213E83E5B7C6F26")
+                entity.HasIndex(e => e.Id, "UQ__Ferramen__3213E83EE6372CF8")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -313,7 +311,7 @@ namespace SAGOM.Infra.Data.Context
             {
                 entity.ToTable("Ordem_de_Servico");
 
-                entity.HasIndex(e => e.Id, "UQ__Ordem_de__3213E83E687406FA")
+                entity.HasIndex(e => e.Id, "UQ__Ordem_de__3213E83EFD9FB538")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -346,7 +344,7 @@ namespace SAGOM.Infra.Data.Context
             modelBuilder.Entity<Pessoa>(entity =>
             {
                 entity.HasKey(e => e.Cpf)
-                    .HasName("PK__Pessoa__D836E71E53157238");
+                    .HasName("PK__Pessoa__D836E71EA6DF1553");
 
                 entity.ToTable("Pessoa");
 
@@ -392,14 +390,14 @@ namespace SAGOM.Infra.Data.Context
 
                 entity.Property(e => e.ValorUnitario)
                     .HasColumnType("decimal(9, 4)")
-                    .HasColumnName("valor_Unitario");
+                    .HasColumnName("valor_unitario");
             });
 
             modelBuilder.Entity<ProdutoOrdemDeServico>(entity =>
             {
                 entity.ToTable("Produto_Ordem_de_Servico");
 
-                entity.HasIndex(e => e.Id, "UQ__Produto___3213E83E73B8A2E3")
+                entity.HasIndex(e => e.Id, "UQ__Produto___3213E83ECA9CEECA")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -446,7 +444,7 @@ namespace SAGOM.Infra.Data.Context
             {
                 entity.ToTable("Servico_Ordem_de_Servico");
 
-                entity.HasIndex(e => e.Id, "UQ__Servico___3213E83E81549D80")
+                entity.HasIndex(e => e.Id, "UQ__Servico___3213E83E3E0CFE2D")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -469,11 +467,11 @@ namespace SAGOM.Infra.Data.Context
             modelBuilder.Entity<Veiculo>(entity =>
             {
                 entity.HasKey(e => new { e.Placa, e.País })
-                    .HasName("PK__Veiculo__6432AF2DD2D495CF");
+                    .HasName("PK__Veiculo__6432AF2D409FD912");
 
                 entity.ToTable("Veiculo");
 
-                entity.HasIndex(e => e.Id, "UQ__Veiculo__3213E83EAD733E24")
+                entity.HasIndex(e => e.Id, "UQ__Veiculo__3213E83EA77D11B3")
                     .IsUnique();
 
                 entity.Property(e => e.Placa)
