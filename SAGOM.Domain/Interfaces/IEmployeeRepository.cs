@@ -9,11 +9,11 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IEmployeeRepository
     {
-        Task<IEnumerable<Employee>> GetEmployeesByCnpjAsync(string cnpj);
-        Task<IEnumerable<Employee>> GetEmployeesByNameAsync(string name);
-        Task<Employee> GetEmployeeByCpfAync(string cpf);
+        //Task<IEnumerable<Employee>?> GetEmployeesByCnpjAsync(string cnpj);
+        Task<IEnumerable<Employee>?> GetEmployeesByNameAsync(string name);
+        Task<Employee?> GetEmployeeByCpfAsync(string cpf);
         Task<Employee> CreateAsync(Employee employee);
-        Task<Employee> UpdateAsync(Employee employee);
-        Task<Employee> RemoveAsync(Employee employee);
+        Task<Employee?> UpdateAsync(Employee employee);
+        Task<Employee?> RemoveAsync(Employee employee);
     }
 }

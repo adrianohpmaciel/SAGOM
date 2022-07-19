@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Infra.Data.Repositories
 {
-    public class PersonRepository : IPersonRepository
+    public class ServiceRepository : IServiceRepository
     {
         SagomDbContext _db;
 
-        public PersonRepository(SagomDbContext context)
+        public ServiceRepository(SagomDbContext context)
         {
             _db = context;
         }
 
-        public async Task<Person> CreateAsync(Person person)
+        public async Task<Service> CreateAsync(Service service)
         {
-            _db.Add(person);
+            _db.Add(service);
             await _db.SaveChangesAsync();
-            return person;
+            return service;
         }
 
-        public async Task<Person?> GetPersonByCpfAsync(string cpf)
+        public async Task<Service> GetServiceByIdAsync(int idService)
         {
-            return await _db.Persons.FindAsync(cpf);
+            return await _db.Services.FindAsync(idService);
         }
 
-        public async Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name)
+        public async Task<IEnumerable<Service>?> GetServicesByNameAsync(string name)
         {
             name = name.Trim().ToLower();
-            return await _db.Persons.Where(p => p.Name.ToLower()
+            return await _db.Services.Where(p => p.Name.ToLower()
                                                       .StartsWith(name)
                                                       ).ToListAsync();
         }
 
-        public async Task<Person> RemoveAsync(Person person)
+        public async Task<Service> RemoveAsync(Service service)
         {
-            _db.Remove(person);
+            _db.Remove(service);
             await _db.SaveChangesAsync();
-            return person;
+            return service;
         }
 
-        public async Task<Person> UpdateAsync(Person person)
+        public async Task<Service> UpdateAsync(Service service)
         {
-            _db.Update(person);
+            _db.Update(service);
             await _db.SaveChangesAsync();
-            return person;
+            return service;
         }
     }
 }

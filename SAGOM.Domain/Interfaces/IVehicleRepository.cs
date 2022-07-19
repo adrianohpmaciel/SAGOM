@@ -9,14 +9,14 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IVehicleRepository
     {
-        Task<IEnumerable<Vehicle>> GetVehicles(Costumer costumer);
-        Task<IEnumerable<Vehicle>> GetVehiclesByModel(string model);
-        Task<IEnumerable<Vehicle>> GetVehiclesByBrand(string brand);
-        Task<IEnumerable<Vehicle>> GetVehiclesByIdCostumerService(Costumer costumer);
-        Task<Vehicle> GetVehicleByLicensePlateAndCountry(string licensePlate, string country);
-        Task<Vehicle> GetVehicleById(int id);
-        Task<Vehicle> Create(Vehicle Vehicle);
-        Task<Vehicle> Update(Vehicle Vehicle);
-        Task<Vehicle> Remove(Vehicle Vehicle);
+        Task<IEnumerable<Vehicle>> GetVehiclesByCostumer(Costumer costumer);
+        //Task<IEnumerable<Vehicle>> GetVehiclesByModel(string model);
+        //Task<IEnumerable<Vehicle>> GetVehiclesByBrand(string brand);
+        //Task<IEnumerable<Vehicle>> GetVehiclesByIdCostumerService(Costumer costumer);
+        Task<Vehicle?> GetVehicleByLicensePlateAndCountry(string licensePlate, string country);
+        Task<Vehicle?> GetVehicleById(int id);
+        Task<Vehicle?> Create(Vehicle vehicle);
+        Task<Vehicle?> Update(Vehicle vehicle);
+        Task<Vehicle?> Remove(Vehicle vehicle);
     }
 }

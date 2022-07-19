@@ -9,9 +9,9 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IProductServiceOrderRepository
     {
-        Task<IEnumerable<ProductServiceOrder>> GetProductServiceOrdersByProductAsync(Product product);
-        Task<IEnumerable<ProductServiceOrder>> GetProductServiceOrdersByServiceOrderAsync(ServiceOrder serviceOrder);
-        Task<ProductServiceOrder> GetProductServiceOrderById(int id);
+        //Task<IEnumerable<ProductServiceOrder>?> GetProductServiceOrdersByProductAsync(Product product);
+        Task<IEnumerable<ProductServiceOrder>?> GetProductServiceOrdersByServiceOrderAsync(ServiceOrder serviceOrder);
+        Task<ProductServiceOrder> GetProductServiceOrderByIdAsync(int id);
         Task<ProductServiceOrder>  CreateAsync(ProductServiceOrder product);
         Task<ProductServiceOrder>  UpdateAsync(ProductServiceOrder product);
         Task<ProductServiceOrder>  RemoveAsync(ProductServiceOrder product);

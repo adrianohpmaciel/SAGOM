@@ -9,8 +9,7 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IServiceRepository
     {
-        Task<IEnumerable<Service>> GetServicesAsync();
-        Task<IEnumerable<Service>> GetServicesByNameAsync(string name);
+        Task<IEnumerable<Service>?> GetServicesByNameAsync(string name);
         Task<Service> GetServiceByIdAsync(int idService);
         Task<Service> CreateAsync(Service service);
         Task<Service> UpdateAsync(Service service);

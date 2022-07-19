@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Infra.Data.Repositories
 {
-    public class PersonRepository : IPersonRepository
+    public class ToolRepository : IToolRepository
     {
         SagomDbContext _db;
 
-        public PersonRepository(SagomDbContext context)
+        public ToolRepository(SagomDbContext context)
         {
             _db = context;
         }
 
-        public async Task<Person> CreateAsync(Person person)
+        public async Task<Tool> CreateAsync(Tool tool)
         {
-            _db.Add(person);
+            _db.Add(tool);
             await _db.SaveChangesAsync();
-            return person;
+            return tool;
         }
 
-        public async Task<Person?> GetPersonByCpfAsync(string cpf)
+        public async Task<Tool> GetToolByIdAsync(int idTool)
         {
-            return await _db.Persons.FindAsync(cpf);
+            return await _db.Tools.FindAsync(idTool);
         }
 
-        public async Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name)
+        public async Task<IEnumerable<Tool>?> GetToolsByNameAsync(string name)
         {
             name = name.Trim().ToLower();
-            return await _db.Persons.Where(p => p.Name.ToLower()
+            return await _db.Tools.Where(p => p.Name.ToLower()
                                                       .StartsWith(name)
                                                       ).ToListAsync();
         }
 
-        public async Task<Person> RemoveAsync(Person person)
+        public async Task<Tool> RemoveAsync(Tool tool)
         {
-            _db.Remove(person);
+            _db.Remove(tool);
             await _db.SaveChangesAsync();
-            return person;
+            return tool;
         }
 
-        public async Task<Person> UpdateAsync(Person person)
+        public async Task<Tool> UpdateAsync(Tool tool)
         {
-            _db.Update(person);
+            _db.Update(tool);
             await _db.SaveChangesAsync();
-            return person;
+            return tool;
         }
     }
 }

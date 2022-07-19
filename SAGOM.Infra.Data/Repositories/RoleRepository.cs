@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Infra.Data.Repositories
 {
-    public class PersonRepository : IPersonRepository
+    public class RoleRepository : IRoleRepository
     {
         SagomDbContext _db;
 
-        public PersonRepository(SagomDbContext context)
+        public RoleRepository(SagomDbContext context)
         {
             _db = context;
         }
 
-        public async Task<Person> CreateAsync(Person person)
+        public async Task<Role> CreateAsync(Role role)
         {
-            _db.Add(person);
+            _db.Add(role);
             await _db.SaveChangesAsync();
-            return person;
+            return role;
         }
 
-        public async Task<Person?> GetPersonByCpfAsync(string cpf)
+        public async Task<Role> GetRoleByIdAsync(int idRole)
         {
-            return await _db.Persons.FindAsync(cpf);
+            return await _db.Roles.FindAsync(idRole);
         }
 
-        public async Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name)
+        public async Task<IEnumerable<Role>?> GetRolesByNameAsync(string name)
         {
             name = name.Trim().ToLower();
-            return await _db.Persons.Where(p => p.Name.ToLower()
+            return await _db.Roles.Where(p => p.Name.ToLower()
                                                       .StartsWith(name)
                                                       ).ToListAsync();
         }
 
-        public async Task<Person> RemoveAsync(Person person)
+        public async Task<Role> RemoveAsync(Role role)
         {
-            _db.Remove(person);
+            _db.Remove(role);
             await _db.SaveChangesAsync();
-            return person;
+            return role;
         }
 
-        public async Task<Person> UpdateAsync(Person person)
+        public async Task<Role> UpdateAsync(Role role)
         {
-            _db.Update(person);
+            _db.Update(role);
             await _db.SaveChangesAsync();
-            return person;
+            return role;
         }
     }
 }

@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Infra.Data.Repositories
 {
-    public class PersonRepository : IPersonRepository
+    public class ProductRepository : IProductRepository
     {
         SagomDbContext _db;
 
-        public PersonRepository(SagomDbContext context)
+        public ProductRepository(SagomDbContext context)
         {
             _db = context;
         }
 
-        public async Task<Person> CreateAsync(Person person)
+        public async Task<Product> CreateAsync(Product product)
         {
-            _db.Add(person);
+            _db.Add(product);
             await _db.SaveChangesAsync();
-            return person;
+            return product;
         }
 
-        public async Task<Person?> GetPersonByCpfAsync(string cpf)
+        public async Task<Product> GetProductByIdAsync(int idProduct)
         {
-            return await _db.Persons.FindAsync(cpf);
+            return await _db.Products.FindAsync(idProduct);
         }
 
-        public async Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name)
+        public async Task<IEnumerable<Product>?> GetProductsByNameAsync(string name)
         {
             name = name.Trim().ToLower();
-            return await _db.Persons.Where(p => p.Name.ToLower()
+            return await _db.Products.Where(p => p.Name.ToLower()
                                                       .StartsWith(name)
                                                       ).ToListAsync();
         }
 
-        public async Task<Person> RemoveAsync(Person person)
+        public async Task<Product> RemoveAsync(Product product)
         {
-            _db.Remove(person);
+            _db.Remove(product);
             await _db.SaveChangesAsync();
-            return person;
+            return product;
         }
 
-        public async Task<Person> UpdateAsync(Person person)
+        public async Task<Product> UpdateAsync(Product product)
         {
-            _db.Update(person);
+            _db.Update(product);
             await _db.SaveChangesAsync();
-            return person;
+            return product;
         }
     }
 }

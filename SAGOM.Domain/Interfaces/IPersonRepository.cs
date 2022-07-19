@@ -10,9 +10,9 @@ namespace SAGOM.Domain.Interfaces
     public interface IPersonRepository
     {
         Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name);
-        Task<Person?> GetPersonByCPFAsync(string cpf);
+        Task<Person?> GetPersonByCpfAsync(string cpf);
         Task<Person> CreateAsync(Person person);
-        Task<Person?> UpdateAsync(Person person);
-        Task<Person?> RemoveAsync(Person person);
+        Task<Person> UpdateAsync(Person person);
+        Task<Person> RemoveAsync(Person person);
     }
 }
