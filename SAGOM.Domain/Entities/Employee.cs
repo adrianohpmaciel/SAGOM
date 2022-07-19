@@ -8,17 +8,17 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Employee
     {
-        public int Id { get; set; }
-        public string? Cpf { get; set; }
-        public int IdRole { get; set; }
-        public decimal? Salary { get; set; }
-        public string? CnpjCompany { get; set; }
+        public int Id { get; private set; }
+        public string? Cpf { get; private set; }
+        public int IdRole { get; private set; }
+        public decimal? Salary { get; private set; }
+        public string? CnpjCompany { get; private set; }
 
-        public Company? CnpjCompanyNavigation { get; set; }
-        public  Person? CpfNavigation { get; set; }
-        public  Role IdRoleNavigation { get; set; } = null!;
-        public ICollection<CostumerService> CostumerServices { get; set; }
-        public ICollection<Tool> Tools { get; set; }
+        public Company? CnpjCompanyNavigation { get; private set; }
+        public  Person? CpfNavigation { get; private set; }
+        public  Role IdRoleNavigation { get; private set; } = null!;
+        public ICollection<CostumerService> CostumerServices { get; private set; }
+        public ICollection<Tool> Tools { get; private set; }
 
         public Employee()
         {

@@ -8,12 +8,12 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Product
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string? Description { get; set; }
-        public int Quantity { get; set; }
-        public decimal? UnitPrice { get; set; }
-        public  ICollection<ProductServiceOrder> ProductServiceOrders { get; set; }
+        public int Id { get; private set; }
+        public string Name { get; private set; } = null!;
+        public string? Description { get; private set; }
+        public int Quantity { get; private set; }
+        public decimal? UnitPrice { get; private set; }
+        public  ICollection<ProductServiceOrder> ProductServiceOrders { get; private set; }
 
         public Product()
         {

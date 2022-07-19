@@ -8,15 +8,15 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Tool
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string? Description { get; set; }
-        public decimal? Price { get; set; }
-        public DateTime? PurchaseDate { get; set; }
-        public DateTime? DiscardDate { get; set; }
-        public string Status { get; set; } = null!;
-        public int? IdEmployee { get; set; }
+        public int Id { get; private set; }
+        public string Name { get; private set; } = null!;
+        public string? Description { get; private set; }
+        public decimal? Price { get; private set; }
+        public DateTime? PurchaseDate { get; private set; }
+        public DateTime? DiscardDate { get; private set; }
+        public string Status { get; private set; } = null!;
+        public int? IdEmployee { get; private set; }
 
-        public Employee? IdEmployeeNavigation { get; set; }
+        public Employee? IdEmployeeNavigation { get; private set; }
     }
 }

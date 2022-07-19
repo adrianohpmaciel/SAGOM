@@ -9,13 +9,13 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Person
     {
-        public string Cpf { get; set; } = null!;
-        public string Name { get; set; } = null!;
-        public string LastName { get; set; } = null!;
-        public string Address { get; set; } = null!;
-        public string CellPhone { get; set; } = null!;
-        public  Costumer? Costumer { get; set; }
-        public  Employee? Employee { get; set; }
+        public string Cpf { get; private set; } = null!;
+        public string Name { get; private set; } = null!;
+        public string LastName { get; private set; } = null!;
+        public string Address { get; private set; } = null!;
+        public string CellPhone { get; private set; } = null!;
+        public  Costumer? Costumer { get; private set; }
+        public  Employee? Employee { get; private set; }
 
         public Person(string cpf, string name, string lastName, string address, string cellPhone)
         {

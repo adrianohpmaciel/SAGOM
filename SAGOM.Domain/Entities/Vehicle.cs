@@ -8,17 +8,17 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Vehicle
     {
-        public int Id { get; set; }
-        public string LicensePlate { get; set; } = null!;
-        public string Country { get; set; } = null!;
-        public string? State { get; set; }
-        public short? Year { get; set; }
-        public string? BrandName { get; set; }
-        public string? ModelName { get; set; }
-        public int IdCostumer { get; set; }
+        public int Id { get; private set; }
+        public string LicensePlate { get; private set; } = null!;
+        public string Country { get; private set; } = null!;
+        public string? State { get; private set; }
+        public short? Year { get; private set; }
+        public string? BrandName { get; private set; }
+        public string? ModelName { get; private set; }
+        public int IdCostumer { get; private set; }
 
-        public  Costumer IdCostumerNavigation { get; set; } = null!;
-        public  ICollection<CostumerService> CostumerServices { get; set; }
+        public  Costumer IdCostumerNavigation { get; private set; } = null!;
+        public  ICollection<CostumerService> CostumerServices { get; private set; }
 
         public Vehicle()
         {

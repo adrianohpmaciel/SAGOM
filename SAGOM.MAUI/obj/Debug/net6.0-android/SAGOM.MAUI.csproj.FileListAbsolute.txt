@@ -2066,3 +2066,5 @@ C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\src\crc64ed1888fb4925e3b7\AuthenticationAgentActivity.java
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\src\crc64ed1888fb4925e3b7\AuthenticationAgentActivity_CoreWebViewClient.java
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\src\microsoft\identity\client\AuthenticationActivity.java
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\assets\Humanizer.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-android\android\assets\Microsoft.EntityFrameworkCore.Design.dll

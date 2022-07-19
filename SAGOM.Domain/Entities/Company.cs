@@ -8,13 +8,13 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Company
     {
-        public string Cnpj { get; set; } = null!;
-        public string FantasyName { get; set; } = null!;
-        public string Address { get; set; } = null!;
-        public string Phone { get; set; } = null!;
+        public string Cnpj { get; private set; } = null!;
+        public string FantasyName { get; private set; } = null!;
+        public string Address { get; private set; } = null!;
+        public string Phone { get; private set; } = null!;
 
-        public  ICollection<Employee> Employees { get; set; }
-        public  ICollection<Bill> Bills { get; set; }
+        public  ICollection<Employee> Employees { get; private set; }
+        public  ICollection<Bill> Bills { get; private set; }
 
         public Company()
         {

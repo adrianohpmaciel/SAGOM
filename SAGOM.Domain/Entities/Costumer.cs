@@ -8,11 +8,11 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Costumer
     {
-        public int Id { get; set; }
-        public string? Cpf { get; set; }
-        public Person? CpfNavigation { get; set; }
-        public ICollection<CostumerService> CostumerServices { get; set; }
-        public ICollection<Vehicle> Vehicles { get; set; }
+        public int Id { get; private set; }
+        public string? Cpf { get; private set; }
+        public Person? CpfNavigation { get; private set; }
+        public ICollection<CostumerService> CostumerServices { get; private set; }
+        public ICollection<Vehicle> Vehicles { get; private set; }
 
         public Costumer()
         {

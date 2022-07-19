@@ -766,3 +766,5 @@ C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.1904
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\System.Windows.Extensions.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Humanizer.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Design.dll

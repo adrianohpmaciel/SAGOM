@@ -8,12 +8,12 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class ProductServiceOrder
     {
-        public int Id { get; set; }
-        public int? IdProduct { get; set; }
-        public int? IdServiceOrder { get; set; }
-        public short? Quantity { get; set; }
+        public int Id { get; private set; }
+        public int? IdProduct { get; private set; }
+        public int? IdServiceOrder { get; private set; }
+        public short? Quantity { get; private set; }
 
-        public  ServiceOrder? IdServiceOrderNavigation { get; set; }
-        public  Product? IdProductNavigation { get; set; }
+        public  ServiceOrder? IdServiceOrderNavigation { get; private set; }
+        public  Product? IdProductNavigation { get; private set; }
     }
 }

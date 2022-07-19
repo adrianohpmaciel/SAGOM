@@ -8,12 +8,12 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Service
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string? Description { get; set; }
-        public decimal Price { get; set; }
+        public int Id { get; private set; }
+        public string Name { get; private set; } = null!;
+        public string? Description { get; private set; }
+        public decimal Price { get; private set; }
 
-        public  ICollection<ServiceServiceOrder> ServiceServiceOrders { get; set; }
+        public  ICollection<ServiceServiceOrder> ServiceServiceOrders { get; private set; }
 
         public Service()
         {

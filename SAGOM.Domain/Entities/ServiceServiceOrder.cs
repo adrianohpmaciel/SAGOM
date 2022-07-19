@@ -8,11 +8,11 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class ServiceServiceOrder
     {
-        public int Id { get; set; }
-        public int? IdService { get; set; }
-        public int? IdServiceOrder { get; set; }
+        public int Id { get; private set; }
+        public int? IdService { get; private set; }
+        public int? IdServiceOrder { get; private set; }
 
-        public ServiceOrder? IdServiceOrderNavigation { get; set; }
-        public Service? IdServiceNavigation { get; set; }
+        public ServiceOrder? IdServiceOrderNavigation { get; private set; }
+        public Service? IdServiceNavigation { get; private set; }
     }
 }

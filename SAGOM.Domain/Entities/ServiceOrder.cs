@@ -8,16 +8,16 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class ServiceOrder
     {
-        public int Id { get; set; }
-        public int? IdCostumerService { get; set; }
-        public DateTime Date { get; set; }
-        public DateTime? UpdateDateLastStatus { get; set; }
-        public string Reason { get; set; } = null!;
-        public string Status { get; set; } = null!;
+        public int Id { get; private set; }
+        public int? IdCostumerService { get; private set; }
+        public DateTime Date { get; private set; }
+        public DateTime? UpdateDateLastStatus { get; private set; }
+        public string Reason { get; private set; } = null!;
+        public string Status { get; private set; } = null!;
 
-        public CostumerService? IdCostumerServiceNavigation { get; set; }
-        public ICollection<ProductServiceOrder> ProductServiceOrders { get; set; }
-        public ICollection<ServiceServiceOrder> ServiceServiceOrders { get; set; }
+        public CostumerService? IdCostumerServiceNavigation { get; private set; }
+        public ICollection<ProductServiceOrder> ProductServiceOrders { get; private set; }
+        public ICollection<ServiceServiceOrder> ServiceServiceOrders { get; private set; }
 
         public ServiceOrder()
         {
