@@ -15,6 +15,8 @@ namespace SAGOM.Domain.Entities
         public string? CnpjCompany { get; set; }
 
         public Company? CnpjCompanyNavigation { get; set; }
+        public  Person? CpfNavigation { get; set; }
+        public  Role IdRoleNavigation { get; set; } = null!;
         public ICollection<CostumerService> CostumerServices { get; set; }
         public ICollection<Tool> Tools { get; set; }
 

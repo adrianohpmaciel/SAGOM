@@ -14,6 +14,8 @@ namespace SAGOM.Domain.Entities
         public string LastName { get; set; } = null!;
         public string Address { get; set; } = null!;
         public string CellPhone { get; set; } = null!;
+        public  Costumer? Costumer { get; set; }
+        public  Employee? Employee { get; set; }
 
         public Person(string cpf, string name, string lastName, string address, string cellPhone)
         {

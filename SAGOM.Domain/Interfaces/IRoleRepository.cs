@@ -11,7 +11,7 @@ namespace SAGOM.Domain.Interfaces
     {
         Task<IEnumerable<Role>> GetRolesAsync();
         Task<IEnumerable<Role>> GetRolesByNameAsync(string name);
-        Task<IEnumerable<Role>> GetRoleByIdAsync(string idRole);
+        Task<IEnumerable<Role>> GetRoleByIdAsync(int idRole);
         Task<IEnumerable<Role>> CreateAsync(Role role);
         Task<IEnumerable<Role>> UpdateAsync(Role role);
         Task<IEnumerable<Role>> RemoveAsync(Role role);

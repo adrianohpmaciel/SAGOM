@@ -9,7 +9,7 @@ namespace SAGOM.Domain.Entities
     public sealed class CostumerService
     {
         public int Id { get; set; }
-        public int? IdClient { get; set; }
+        public int? IdCostumer { get; set; }
         public int? IdEmployee { get; set; }
         public int? IdVehicle { get; set; }
         public DateTime Date { get; set; }
@@ -18,7 +18,7 @@ namespace SAGOM.Domain.Entities
         public string Status { get; set; } = null!;
         public int? IdBill { get; set; }
 
-        public  Client? IdClientNavigation { get; set; }
+        public  Costumer? IdCostumerNavigation { get; set; }
         public  Employee? IdEmployeeNavigation { get; set; }
         public  Vehicle? IdVehicleNavigation { get; set; }
         public  Bill Bill { get; set; } = null!;

@@ -13,13 +13,13 @@ namespace SAGOM.Domain.Entities
         public string? CnpjPayer { get; set; }
         public string? CpfPayer { get; set; }
         public string? Description { get; set; }
-        public decimal Value { get; set; }
+        public decimal Amount { get; set; }
         public DateTime Date { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime? PaymentDate { get; set; }
         public string Status { get; set; } = null!;
 
-        public  Company CnpjRecebedorNavigation { get; set; } = null!;
+        public  Company CnpjReceiverNavigation { get; set; } = null!;
         public  CostumerService IdNavigation { get; set; } = null!;
 
 

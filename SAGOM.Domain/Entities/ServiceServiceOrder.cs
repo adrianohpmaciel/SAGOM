@@ -13,6 +13,6 @@ namespace SAGOM.Domain.Entities
         public int? IdServiceOrder { get; set; }
 
         public ServiceOrder? IdServiceOrderNavigation { get; set; }
-        public Service? IdProductNavigation { get; set; }
+        public Service? IdServiceNavigation { get; set; }
     }
 }

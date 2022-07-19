@@ -8,12 +8,6 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class ServiceOrder
     {
-        public ServiceOrder()
-        {
-            ProdutoOrdemDeServicos = new HashSet<ProductServiceOrder>();
-            ServicoOrdemDeServicos = new HashSet<ServiceServiceOrder>();
-        }
-
         public int Id { get; set; }
         public int? IdCostumerService { get; set; }
         public DateTime Date { get; set; }
@@ -21,8 +15,14 @@ namespace SAGOM.Domain.Entities
         public string Reason { get; set; } = null!;
         public string Status { get; set; } = null!;
 
-        public  CostumerService? IdAtendimentoNavigation { get; set; }
-        public  ICollection<ProductServiceOrder> ProdutoOrdemDeServicos { get; set; }
-        public  ICollection<ServiceServiceOrder> ServicoOrdemDeServicos { get; set; }
+        public CostumerService? IdCostumerServiceNavigation { get; set; }
+        public ICollection<ProductServiceOrder> ProductServiceOrders { get; set; }
+        public ICollection<ServiceServiceOrder> ServiceServiceOrders { get; set; }
+
+        public ServiceOrder()
+        {
+            ProductServiceOrders = new HashSet<ProductServiceOrder>();
+            ServiceServiceOrders = new HashSet<ServiceServiceOrder>();
+        }
     }
 }

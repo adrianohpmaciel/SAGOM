@@ -11,7 +11,7 @@ namespace SAGOM.Domain.Entities
         public string Cnpj { get; set; } = null!;
         public string FantasyName { get; set; } = null!;
         public string Address { get; set; } = null!;
-        public string CellPhone { get; set; } = null!;
+        public string Phone { get; set; } = null!;
 
         public  ICollection<Employee> Employees { get; set; }
         public  ICollection<Bill> Bills { get; set; }

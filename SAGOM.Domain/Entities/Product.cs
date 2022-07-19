@@ -12,7 +12,7 @@ namespace SAGOM.Domain.Entities
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
         public int Quantity { get; set; }
-        public decimal? UnitValue { get; set; }
+        public decimal? UnitPrice { get; set; }
         public  ICollection<ProductServiceOrder> ProductServiceOrders { get; set; }
 
         public Product()
@@ -21,18 +21,19 @@ namespace SAGOM.Domain.Entities
         }
 
 
-        public Product(int id, string name, string description, int quantity, decimal unitValue)
+        public Product(int id, string name, string description, int quantity, decimal unitPrice)
         {
+            ProductServiceOrders = new HashSet<ProductServiceOrder>();
             Id = id;
             Name = name;
             Description = description;
             Quantity = quantity;
-            UnitValue = unitValue;
+            UnitPrice = unitPrice;
         }
 
         public decimal? GetTotal()
         {
-            return UnitValue * Quantity;
+            return UnitPrice * Quantity;
         }
 
     }

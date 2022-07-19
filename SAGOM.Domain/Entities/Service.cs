@@ -22,6 +22,7 @@ namespace SAGOM.Domain.Entities
 
         public Service(int id, string name, string description, decimal price)
         {
+            ServiceServiceOrders = new HashSet<ServiceServiceOrder>();
             Id = id;
             Name = name;
             Description = description;

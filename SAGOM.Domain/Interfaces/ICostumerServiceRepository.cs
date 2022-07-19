@@ -10,7 +10,7 @@ namespace SAGOM.Domain.Interfaces
     public interface ICostumerServiceRepository
     {
         Task<IEnumerable<CostumerService>> GetCostumerServicesAsync();
-        Task<IEnumerable<CostumerService>> GetCostumerServicesByClientAsync(Client client);
+        Task<IEnumerable<CostumerService>> GetCostumerServicesByCostumerAsync(Costumer costumer);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByEmployeeAsync(Employee employee);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByVehicleAsync(Vehicle vehicle);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByDataAsync(DateTime data);

@@ -15,9 +15,9 @@ namespace SAGOM.Domain.Entities
         public short? Year { get; set; }
         public string? BrandName { get; set; }
         public string? ModelName { get; set; }
-        public int IdClient { get; set; }
+        public int IdCostumer { get; set; }
 
-        public  Client IdClientNavigation { get; set; } = null!;
+        public  Costumer IdCostumerNavigation { get; set; } = null!;
         public  ICollection<CostumerService> CostumerServices { get; set; }
 
         public Vehicle()
@@ -25,15 +25,16 @@ namespace SAGOM.Domain.Entities
             CostumerServices = new HashSet<CostumerService>();
         }
 
-        public Vehicle(string licensePlate, string country, string state, short? year, string brandName, string modelName, int idClient)
+        public Vehicle(string licensePlate, string country, string state, short? year, string brandName, string modelName, int idCostumer)
         {
+            CostumerServices = new HashSet<CostumerService>();
             LicensePlate = licensePlate;
             Country = country;
             State = state;
             Year = year;
             BrandName = brandName;
             ModelName = modelName;
-            IdClient = idClient;
+            IdCostumer = idCostumer;
         }
     }
 }
