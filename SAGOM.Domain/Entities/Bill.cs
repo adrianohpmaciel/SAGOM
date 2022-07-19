@@ -8,18 +8,19 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Bill
     {
-        public int Id { get; private set; }
-        public string CnpjReceiverCompany { get; private set; }
-        public string? CnpjPayerCompany { get; private set; }
-        public string? CpfPayer { get; private set; }
-        public string? Description { get; private set; }
-        public decimal Value { get; private set; }
-        public DateTime Date { get; private set; }
-        public DateTime? DueDate { get; private set; }
-        public DateTime? PaymentDate { get; private set; }
-        public string Status { get; private set; }
+        public int Id { get; set; }
+        public string CnpjReceiver { get; set; } = null!;
+        public string? CnpjPayer { get; set; }
+        public string? CpfPayer { get; set; }
+        public string? Description { get; set; }
+        public decimal Value { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime? PaymentDate { get; set; }
+        public string Status { get; set; } = null!;
 
-        public Company CnpjReceiverCompanyNavigation { get; private set; }
+        public  Company CnpjRecebedorNavigation { get; set; } = null!;
+        public  CostumerService IdNavigation { get; set; } = null!;
 
 
     }

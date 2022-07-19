@@ -8,17 +8,18 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Company
     {
-        public string Cnpj { get; private set; }
-        public string FantasyName { get; private set; }
-        public string Address { get; private set; }
-        public string Telephone { get; private set; }
+        public string Cnpj { get; set; } = null!;
+        public string FantasyName { get; set; } = null!;
+        public string Address { get; set; } = null!;
+        public string CellPhone { get; set; } = null!;
 
-        public Company (string cnpj, string fantasyName, string address, string telephone)
+        public  ICollection<Employee> Employees { get; set; }
+        public  ICollection<Bill> Bills { get; set; }
+
+        public Company()
         {
-            Cnpj = cnpj;
-            FantasyName = fantasyName;
-            Address = address;
-            Telephone = telephone;
+            Employees = new HashSet<Employee>();
+            Bills = new HashSet<Bill>();
         }
     }
 }

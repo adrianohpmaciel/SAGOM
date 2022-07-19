@@ -8,15 +8,24 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Vehicle
     {
-        public string LicensePlate { get; private set; }
-        public string Country { get; private set; }
-        public string State { get; private set; }
-        public int Year { get; private set; }
-        public string BrandName { get; private set; }
-        public string ModelName { get; private set; }
-        public Client Owner { get; private set; }
+        public int Id { get; set; }
+        public string LicensePlate { get; set; } = null!;
+        public string Country { get; set; } = null!;
+        public string? State { get; set; }
+        public short? Year { get; set; }
+        public string? BrandName { get; set; }
+        public string? ModelName { get; set; }
+        public int IdClient { get; set; }
 
-        public Vehicle(string licensePlate, string country, string state, int year, string brandName, string modelName, Client owner)
+        public  Client IdClientNavigation { get; set; } = null!;
+        public  ICollection<CostumerService> CostumerServices { get; set; }
+
+        public Vehicle()
+        {
+            CostumerServices = new HashSet<CostumerService>();
+        }
+
+        public Vehicle(string licensePlate, string country, string state, short? year, string brandName, string modelName, int idClient)
         {
             LicensePlate = licensePlate;
             Country = country;
@@ -24,7 +33,7 @@ namespace SAGOM.Domain.Entities
             Year = year;
             BrandName = brandName;
             ModelName = modelName;
-            Owner = owner;
+            IdClient = idClient;
         }
     }
 }

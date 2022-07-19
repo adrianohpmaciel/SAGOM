@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EntitiesFromDB\**" />
+    <EmbeddedResource Remove="EntitiesFromDB\**" />
+    <None Remove="EntitiesFromDB\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SAGOM.Domain\SAGOM.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="EntitiesFromDB\" />
     <Folder Include="Identity\" />
     <Folder Include="Repositories\" />
   </ItemGroup>

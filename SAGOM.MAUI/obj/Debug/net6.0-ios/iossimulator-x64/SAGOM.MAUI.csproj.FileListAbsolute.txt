@@ -607,3 +607,4 @@ C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\System.Security.Permissions.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\System.Windows.Extensions.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-ios\iossimulator-x64\build-signature\signature

@@ -8,15 +8,16 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Client
     {
-        public int Id { get; private set; }
-        public Person Person { get; private set; }
-        public ICollection<Vehicle> Vehicles { get; private set; }
+        public int Id { get; set; }
+        public string? Cpf { get; set; }
+        public ICollection<CostumerService> CostumerServices { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
 
-        public Client(int id, Person person, ICollection<Vehicle> vehicles)
+        public Client()
         {
-            Id = id;
-            Person = person;
-            Vehicles = vehicles;
-        }   
+            CostumerServices = new HashSet<CostumerService>();
+            Vehicles = new HashSet<Vehicle>();
+        }
+
     }
 }

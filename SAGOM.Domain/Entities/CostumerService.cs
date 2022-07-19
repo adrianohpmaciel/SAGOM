@@ -8,25 +8,27 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class CostumerService
     {
-        public int Id { get; private set; }
-        public Client Client { get; private set; }
-        public Employee Employee { get; private set; }
-        public Vehicle Vehicle { get; private set; }
-        public string Description { get; private set; }
-        public string Status { get; private set; }
-        public ICollection<ServiceOrder>? ServiceOrders { get; private set; }
-        public Bill? Bill { get; private set; }
+        public int Id { get; set; }
+        public int? IdClient { get; set; }
+        public int? IdEmployee { get; set; }
+        public int? IdVehicle { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime? UpdateDateLastStatus { get; set; }
+        public string ProblemDescription { get; set; } = null!;
+        public string Status { get; set; } = null!;
+        public int? IdBill { get; set; }
 
-        public CostumerService(int id, Client client, Employee employee, Vehicle vehicle, string description, string status, ICollection<ServiceOrder>? serviceOrders, Bill? bill)
+        public  Client? IdClientNavigation { get; set; }
+        public  Employee? IdEmployeeNavigation { get; set; }
+        public  Vehicle? IdVehicleNavigation { get; set; }
+        public  Bill Bill { get; set; } = null!;
+        public  ICollection<ServiceOrder> ServiceOrders { get; set; }
+
+        public CostumerService()
         {
-            Id = id;
-            Client = client;
-            Employee = employee;
-            Vehicle = vehicle;
-            Description = description;
-            Status = status;
-            ServiceOrders = serviceOrders;
-            Bill = bill;
-        }   
+            ServiceOrders = new HashSet<ServiceOrder>();
+        }
+
+
     }
 }

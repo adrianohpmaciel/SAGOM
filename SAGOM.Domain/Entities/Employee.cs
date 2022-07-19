@@ -8,17 +8,22 @@ namespace SAGOM.Domain.Entities
 {
     public sealed class Employee
     {
-        public int Id { get; private set; }
-        public Role Role { get; private set; }
-        public Person Person { get; private set; }
-        public double Salary { get; private set; }
+        public int Id { get; set; }
+        public string? Cpf { get; set; }
+        public int IdRole { get; set; }
+        public decimal? Salary { get; set; }
+        public string? CnpjCompany { get; set; }
 
-        public Employee (int id, Role role, Person person, double salary)
+        public Company? CnpjCompanyNavigation { get; set; }
+        public ICollection<CostumerService> CostumerServices { get; set; }
+        public ICollection<Tool> Tools { get; set; }
+
+        public Employee()
         {
-            Id = id;
-            Role = role;
-            Person = person;
-            Salary = salary;
-        }   
+            CostumerServices = new HashSet<CostumerService>();
+            Tools = new HashSet<Tool>();
+        }
+
+
     }
 }
