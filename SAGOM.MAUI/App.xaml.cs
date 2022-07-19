@@ -1,6 +1,6 @@
 ﻿namespace SAGOM.MAUI
 {
-    public partial class App : IApplication
+    public partial class App : Application
     {
         public App()
         {

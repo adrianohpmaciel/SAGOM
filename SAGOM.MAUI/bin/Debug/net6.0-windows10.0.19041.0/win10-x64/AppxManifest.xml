@@ -7,7 +7,7 @@
 
     Para obter mais informações sobre arquivos de pacote de manifesto consulte http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="87627066-809A-4C5B-8741-0D35C4B0D076" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
+  <Identity Name="81131861-2827-4295-84E5-670C0AEAAE02" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>SAGOM.MAUI</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>
