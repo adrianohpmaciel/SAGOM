@@ -26,7 +26,7 @@ namespace SAGOM.Infra.Data.Repositories
             return costumer;
         }
 
-        public async Task<Costumer?> GetCostumerByCPFAsync(string cpf)
+        public async Task<Costumer?> GetCostumerByCpfAsync(string cpf)
         {
             return await _db.Costumers.FindAsync(cpf);
         }

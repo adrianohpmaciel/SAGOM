@@ -60,7 +60,7 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
                     .WithMany(p => p.CostumerServices)
                     .HasPrincipalKey(p => p.Id)
                     .HasForeignKey(d => d.IdVehicle)
-                    .HasConstraintName("FK_Atendimento.id_veiculo");            
+                    .HasConstraintName("FK_Atendimento.id_veiculo");
         }
     }
 }

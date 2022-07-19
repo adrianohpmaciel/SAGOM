@@ -589,3 +589,4 @@ C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-maccatalyst\macc
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-maccatalyst\maccatalyst-x64\System.Windows.Extensions.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-maccatalyst\maccatalyst-x64\Humanizer.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-maccatalyst\maccatalyst-x64\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-maccatalyst\maccatalyst-x64\AutoMapper.dll

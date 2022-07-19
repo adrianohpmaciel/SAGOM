@@ -21,7 +21,7 @@ namespace SAGOM.Domain.Entities
         public  Costumer? IdCostumerNavigation { get; private set; }
         public  Employee? IdEmployeeNavigation { get; private set; }
         public  Vehicle? IdVehicleNavigation { get; private set; }
-        public  Bill Bill { get; private set; } = null!;
+        
         public  ICollection<ServiceOrder> ServiceOrders { get; private set; }
 
         public CostumerService()

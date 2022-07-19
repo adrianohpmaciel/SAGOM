@@ -31,7 +31,7 @@ namespace SAGOM.Infra.Data.Repositories
             return await _db.ServiceOrders.FindAsync(idServiceOrder);
         }
 
-        public async Task<IEnumerable<ServiceOrder>?> GetServiceOrdersByCostumerService(CostumerService costumerService)
+        public async Task<IEnumerable<ServiceOrder>?> GetServiceOrdersByCostumerServiceAsync(CostumerService costumerService)
         {
             return await _db.ServiceOrders.Where(so => so.IdCostumerServiceNavigation.Equals(costumerService)).ToListAsync();
         }

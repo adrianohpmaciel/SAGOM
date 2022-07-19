@@ -12,7 +12,7 @@ namespace SAGOM.Domain.Interfaces
         //Task<IEnumerable<Bill>?> GetBillsByReceiverCompanyAsync(Company company);
         //Task<IEnumerable<Bill>?> GetBillsByPayerAsync(Person payer);
         //Task<IEnumerable<Bill>?> GetBillsByPayerCompanyAsync(Company company);
-        Task<IEnumerable<Bill>?> GetBillsByData(DateTime data);
+        Task<IEnumerable<Bill>?> GetBillsByDate(DateTime data);
         Task<Bill?> GetBillByIdAsync(int id);
         Task<Bill> CreateAsync(Bill bill);
         Task<Bill?> UpdateAsync(Bill bill);

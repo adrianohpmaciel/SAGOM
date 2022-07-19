@@ -14,6 +14,8 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Tool> builder)
         {
+            builder.ToTable("Ferramenta");
+
             builder.HasIndex(e => e.Id, "UQ__Ferramen__3213E83E49A210E9")
                 .IsUnique();
 

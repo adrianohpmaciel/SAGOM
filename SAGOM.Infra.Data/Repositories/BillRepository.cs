@@ -31,7 +31,7 @@ namespace SAGOM.Infra.Data.Repositories
             return await _db.Bills.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Bill>?> GetBillsByData(DateTime data)
+        public async Task<IEnumerable<Bill>?> GetBillsByDate(DateTime data)
         {
             return await _db.Bills.Where(b => b.Date == data).ToListAsync();
         }

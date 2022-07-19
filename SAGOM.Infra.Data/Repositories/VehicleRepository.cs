@@ -19,36 +19,36 @@ namespace SAGOM.Infra.Data.Repositories
             _db = db;
         }
 
-        public async Task<Vehicle?> Create(Vehicle vehicle)
+        public async Task<Vehicle?> CreateAsync(Vehicle vehicle)
         {
             _db.Add(vehicle);
             await _db.SaveChangesAsync();
             return vehicle;
         }
 
-        public async Task<Vehicle?> GetVehicleById(int id)
+        public async Task<Vehicle?> GetVehicleByIdAsync(int id)
         {
             return await _db.Vehicles.FindAsync(id);
         }
 
-        public async Task<Vehicle?> GetVehicleByLicensePlateAndCountry(string licensePlate, string country)
+        public async Task<Vehicle?> GetVehicleByLicensePlateAndCountryAsync(string licensePlate, string country)
         {
             return await _db.Vehicles.FindAsync(licensePlate, country);
         }
 
-        public async Task<IEnumerable<Vehicle>> GetVehiclesByCostumer(Costumer costumer)
+        public async Task<IEnumerable<Vehicle>> GetVehiclesByCostumerAsync(Costumer costumer)
         {
             return await _db.Vehicles.Where(v => v.IdCostumerNavigation.Equals(costumer)).ToListAsync();
         }
 
-        public async Task<Vehicle?> Remove(Vehicle vehicle)
+        public async Task<Vehicle?> RemoveAsync(Vehicle vehicle)
         {
             _db.Remove(vehicle);
             await _db.SaveChangesAsync();
             return vehicle;
         }
 
-        public async Task<Vehicle?> Update(Vehicle vehicle)
+        public async Task<Vehicle?> UpdateAsync(Vehicle vehicle)
         {
             _db.Update(vehicle);
             await _db.SaveChangesAsync();

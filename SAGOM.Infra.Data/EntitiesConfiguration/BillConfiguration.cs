@@ -14,6 +14,8 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Bill> builder)
         {
+            builder.ToTable("Conta");
+
             builder.HasIndex(e => e.Id, "UQ__Conta__3213E83EB19ED64D")
                     .IsUnique();
 

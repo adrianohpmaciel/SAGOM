@@ -609,3 +609,5 @@ C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\System.Windows.Extensions.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\Humanizer.dll
 C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-ios\iossimulator-x64\build-signature\signature
+C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\bin\Debug\net6.0-ios\iossimulator-x64\AutoMapper.dll

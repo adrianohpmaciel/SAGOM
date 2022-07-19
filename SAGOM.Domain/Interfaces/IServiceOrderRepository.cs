@@ -9,7 +9,7 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IServiceOrderRepository
     {
-        Task<IEnumerable<ServiceOrder>?> GetServiceOrdersByCostumerService(CostumerService costumerService);
+        Task<IEnumerable<ServiceOrder>?> GetServiceOrdersByCostumerServiceAsync(CostumerService costumerService);
         //Task<IEnumerable<ServiceOrder>> GetServicesOrdersByDataAsync(DateTime data);
         Task<ServiceOrder> GetServiceOrderByIdAsync(int idServiceOrder);
         Task<ServiceOrder>CreateAsync(ServiceOrder serviceOrder);

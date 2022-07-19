@@ -12,7 +12,7 @@ namespace SAGOM.Domain.Interfaces
         //Task<IEnumerable<CostumerService>> GetCostumerServicesByCostumerAsync(Costumer costumer);
         //Task<IEnumerable<CostumerService>> GetCostumerServicesByEmployeeAsync(Employee employee);
         Task<IEnumerable<CostumerService>?> GetCostumerServicesByVehicleAsync(Vehicle vehicle);
-        Task<IEnumerable<CostumerService>?> GetCostumerServicesByDataAsync(DateTime date);
+        Task<IEnumerable<CostumerService>?> GetCostumerServicesByDateAsync(DateTime date);
         Task<CostumerService?> GetCostumerServiceByIdAsync(int id);
         Task<CostumerService> CreateAsync(CostumerService costumerService);
         Task<CostumerService?> UpdateAsync(CostumerService costumerService);

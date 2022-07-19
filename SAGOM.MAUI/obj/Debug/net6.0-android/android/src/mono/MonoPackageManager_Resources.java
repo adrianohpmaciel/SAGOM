@@ -8,6 +8,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.Xaml.dll",
 		"Microsoft.Maui.Controls.dll",
 		"Microsoft.Maui.Essentials.dll",
+		"AutoMapper.dll",
 		"GoogleGson.dll",
 		"Humanizer.dll",
 		"Microsoft.AspNetCore.Authorization.dll",

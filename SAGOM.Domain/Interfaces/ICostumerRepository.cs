@@ -11,7 +11,7 @@ namespace SAGOM.Domain.Interfaces
     {
         Task<IEnumerable<Costumer>?> GetCostumersByNameAsync(string name);
         Task<Costumer?> GetCostumerByIdAsync(int id);
-        Task<Costumer?> GetCostumerByCPFAsync(string cpf);
+        Task<Costumer?> GetCostumerByCpfAsync(string cpf);
         Task<Costumer> CreateAsync(Costumer costumer);
         Task<Costumer?> UpdateAsync(Costumer costumer);
         Task<Costumer?> RemoveAsync(Costumer costumer);

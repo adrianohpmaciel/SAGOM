@@ -31,7 +31,7 @@ namespace SAGOM.Infra.Data.Repositories
             return await _db.CostumerServices.FindAsync(id);
         }
 
-        public async Task<IEnumerable<CostumerService>?> GetCostumerServicesByDataAsync(DateTime date)
+        public async Task<IEnumerable<CostumerService>?> GetCostumerServicesByDateAsync(DateTime date)
         {
             return await _db.CostumerServices.Where(cs => cs.Date.Equals(date)).ToListAsync();
         }

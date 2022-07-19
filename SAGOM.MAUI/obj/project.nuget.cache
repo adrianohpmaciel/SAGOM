@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pDzH31pzkxhEnTFPEKBy9NLZEqQeN29s79DCsH6sgHYAuplK0vS9mMvTqNdwv48viDphysIzaN/uqp/7jnCX2w==",
+  "dgSpecHash": "2gDbA8Nfy+9D/tzopsk7RTWQ7haPsOFVPG9F82Uw0winTkCnyco/00ONIk+avlSYOKoZxzpkFZ+pqyNvjVtkSA==",
   "success": true,
   "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\SAGOM.MAUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\adria\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",
@@ -14,7 +15,7 @@
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\6.0.5\\microsoft.aspnetcore.components.webview.6.0.5.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.components.webview.maui\\6.0.408\\microsoft.aspnetcore.components.webview.maui.6.0.408.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.5\\microsoft.aspnetcore.metadata.6.0.5.nupkg.sha512",
-    "C:\\Users\\adria\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",

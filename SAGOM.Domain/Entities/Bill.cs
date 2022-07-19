@@ -20,7 +20,6 @@ namespace SAGOM.Domain.Entities
         public string Status { get; private set; } = null!;
 
         public  Company CnpjReceiverNavigation { get; private set; } = null!;
-        public  CostumerService IdNavigation { get; private set; } = null!;
 
 
     }
