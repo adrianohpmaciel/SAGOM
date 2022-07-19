@@ -9,11 +9,10 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface ICompanyRepository
     {
-        Task<IEnumerable<Company>> GetAllCompanyAsync();
         Task<IEnumerable<Company>> GetAllCompanyByNameAsync(string fantasyName);
-        Task<IEnumerable<Company>> GetCompanyByCnpjAsync(string cnpj);
-        Task<IEnumerable<Company>> CreateAsync(Company company);
-        Task<IEnumerable<Company>> UpdateAsync(Company company);
-        Task<IEnumerable<Company>> RemoveAsync(Company company);
+        Task<Company> GetCompanyByCnpjAsync(string cnpj);
+        Task<Company> CreateAsync(Company company);
+        Task<Company> UpdateAsync(Company company);
+        Task<Company> RemoveAsync(Company company);
     }
 }

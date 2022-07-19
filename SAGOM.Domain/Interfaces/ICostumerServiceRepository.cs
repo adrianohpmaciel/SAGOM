@@ -9,14 +9,13 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface ICostumerServiceRepository
     {
-        Task<IEnumerable<CostumerService>> GetCostumerServicesAsync();
         Task<IEnumerable<CostumerService>> GetCostumerServicesByCostumerAsync(Costumer costumer);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByEmployeeAsync(Employee employee);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByVehicleAsync(Vehicle vehicle);
         Task<IEnumerable<CostumerService>> GetCostumerServicesByDataAsync(DateTime data);
-        Task<IEnumerable<CostumerService>> GetCostumerServiceByIdAsync(int id);
-        Task<IEnumerable<CostumerService>> CreateAsync(CostumerService costumerService);
-        Task<IEnumerable<CostumerService>> UpdateAsync(CostumerService costumerService);
-        Task<IEnumerable<CostumerService>> RemoveAsync(CostumerService costumerService);
+        Task<CostumerService> GetCostumerServiceByIdAsync(int id);
+        Task<CostumerService> CreateAsync(CostumerService costumerService);
+        Task<CostumerService> UpdateAsync(CostumerService costumerService);
+        Task<CostumerService> RemoveAsync(CostumerService costumerService);
     }
 }

@@ -9,14 +9,13 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IBillRepository
     {
-        Task<IEnumerable<Bill>> GetBillsAsync();
         Task<IEnumerable<Bill>> GetBillsByReceiverCompanyAsync(Company company);
         Task<IEnumerable<Bill>> GetBillsByPayerAsync(Person payer);
         Task<IEnumerable<Bill>> GetBillsByPayerCompanyAsync(Company company);
         Task<IEnumerable<Bill>> GetBillsByData(DateTime data);
-        Task<IEnumerable<Bill>> GetBillByIdAsync(int id);
-        Task<IEnumerable<Bill>> CreateAsync(Bill bill);
-        Task<IEnumerable<Bill>> UpdateAsync(Bill bill);
-        Task<IEnumerable<Bill>> RemoveAsync(Bill bill);
+        Task<Bill> GetBillByIdAsync(int id);
+        Task<Bill> CreateAsync(Bill bill);
+        Task<Bill> UpdateAsync(Bill bill);
+        Task<Bill> RemoveAsync(Bill bill);
     }
 }

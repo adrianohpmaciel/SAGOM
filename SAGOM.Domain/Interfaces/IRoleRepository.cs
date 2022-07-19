@@ -9,11 +9,10 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IRoleRepository
     {
-        Task<IEnumerable<Role>> GetRolesAsync();
         Task<IEnumerable<Role>> GetRolesByNameAsync(string name);
         Task<IEnumerable<Role>> GetRoleByIdAsync(int idRole);
-        Task<IEnumerable<Role>> CreateAsync(Role role);
-        Task<IEnumerable<Role>> UpdateAsync(Role role);
-        Task<IEnumerable<Role>> RemoveAsync(Role role);
+        Task<Role> CreateAsync(Role role);
+        Task<Role> UpdateAsync(Role role);
+        Task<Role> RemoveAsync(Role role);
     }
 }

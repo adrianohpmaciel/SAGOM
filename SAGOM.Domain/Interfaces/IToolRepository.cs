@@ -9,11 +9,10 @@ namespace SAGOM.Domain.Interfaces
 {
     public interface IToolRepository
     {
-        Task<IEnumerable<Tool>> GetToolsAsync();
         Task<IEnumerable<Tool>> GetToolsByNameAsync(string name);
-        Task<IEnumerable<Tool>> GetToolByIdAsync(int idTool);
-        Task<IEnumerable<Tool>> CreateAsync(Tool tool);
-        Task<IEnumerable<Tool>> UpdateAsync(Tool tool);
-        Task<IEnumerable<Tool>> RemoveAsync(Tool tool);
+        Task<Tool> GetToolByIdAsync(int idTool);
+        Task<Tool> CreateAsync(Tool tool);
+        Task<Tool> UpdateAsync(Tool tool);
+        Task<Tool> RemoveAsync(Tool tool);
     }
 }
