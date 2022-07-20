@@ -9,6 +9,7 @@ namespace SAGOM.Application.Interfaces
 {
     public interface IRoleService
     {
+        Task<IEnumerable<RoleDTO>> GetAllRoles();
         Task<IEnumerable<RoleDTO>> GetRolesByName(string name);
         Task<RoleDTO> GetRoleById(int idRole);
         Task Add(RoleDTO role);

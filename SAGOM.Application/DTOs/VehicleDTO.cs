@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Application.DTOs
 {
-    public sealed class VehicleDTO
+    public class VehicleDTO
     {
         public int Id { get; private set; }
         public string LicensePlate { get; private set; } = null!;

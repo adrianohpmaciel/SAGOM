@@ -17,7 +17,7 @@
 
         <!-- App Identifier -->
         <ApplicationId>com.companyname.sagom.maui</ApplicationId>
-        <ApplicationIdGuid>81131861-2827-4295-84E5-670C0AEAAE02</ApplicationIdGuid>
+        <ApplicationIdGuid>20A0C4A3-BC11-4FA6-B264-D831821CED24</ApplicationIdGuid>
 
         <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -47,6 +47,18 @@
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SAGOM.Infra.IoC\SAGOM.Infra.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ViewModels\" />
     </ItemGroup>
 
 </Project>

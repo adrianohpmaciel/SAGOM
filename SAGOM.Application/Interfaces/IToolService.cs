@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SAGOM.Domain.Interfaces
+namespace SAGOM.Application.Interfaces
 {
     public interface IToolService
     {

@@ -22,6 +22,13 @@ namespace SAGOM.Application.Services
             _mapper = mapper;
         }
 
+
+        public async Task<IEnumerable<RoleDTO>> GetAllRoles()
+        {
+           var rolesEntities = await _roleRepository.GetAllRolesAsync();
+            return _mapper.Map<IEnumerable<RoleDTO>>(rolesEntities);
+        }
+
         public async Task<IEnumerable<RoleDTO>?> GetRolesByName(string name)
         {
             var rolesEntities = await _roleRepository.GetRolesByNameAsync(name);
@@ -51,5 +58,6 @@ namespace SAGOM.Application.Services
             var roleEntity = _mapper.Map<Role>(role);
             await _roleRepository.RemoveAsync(roleEntity);
         }
+
     }
 }

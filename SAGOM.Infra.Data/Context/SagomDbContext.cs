@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using SAGOM.Domain.Entities;
+using SAGOM.Infra.Data.Identity;
 
 namespace SAGOM.Infra.Data.Context
 {
-    public  class SagomDbContext : DbContext
+    public  class SagomDbContext : IdentityDbContext<ApplicationUser>
     {
         public  DbSet<CostumerService> CostumerServices { get; set; } = null!;
         public  DbSet<Role> Roles { get; set; } = null!;

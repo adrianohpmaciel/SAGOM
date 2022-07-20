@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Application.DTOs
 {
-    public sealed class ServiceOrderDTO
+    public class ServiceOrderDTO
     {
         public int Id { get; private set; }
         public int? IdCostumerService { get; private set; }

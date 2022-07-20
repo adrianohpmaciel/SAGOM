@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using SAGOM.MAUI.Data;
+using SAGOM.MAUI.Models;
 
 namespace SAGOM.MAUI
 {
@@ -17,7 +17,7 @@ namespace SAGOM.MAUI
 
             builder.Services.AddMauiBlazorWebView();
 #if DEBUG
-		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 
             builder.Services.AddSingleton<WeatherForecastService>();

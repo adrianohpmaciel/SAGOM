@@ -19,6 +19,11 @@ namespace SAGOM.Infra.Data.Repositories
             _db = context;
         }
 
+        public async Task<IEnumerable<Role>> GetAllRolesAsync()
+        {
+            return await _db.Roles.ToListAsync();
+        }
+
         public async Task<Role> CreateAsync(Role role)
         {
             _db.Add(role);

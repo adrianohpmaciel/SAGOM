@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Application.DTOs
 {
-    public sealed class BillDTO
+    public class BillDTO
     {
         public int Id { get; private set; }
         public string CnpjReceiver { get; private set; } = null!;

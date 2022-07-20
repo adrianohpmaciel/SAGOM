@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>81131861-2827-4295-84E5-670C0AEAAE02</PackageIdentityName>
+    <PackageIdentityName>20A0C4A3-BC11-4FA6-B264-D831821CED24</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
@@ -724,6 +724,15 @@
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.26\lib\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\automapper\11.0.1\lib\netstandard2.1\AutoMapper.dll">
+      <PackagePath>AutoMapper.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\automapper.extensions.microsoft.dependencyinjection\11.0.0\lib\netstandard2.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll">
+      <PackagePath>AutoMapper.Extensions.Microsoft.DependencyInjection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\humanizer.core\2.8.26\lib\netstandard2.0\Humanizer.dll">
+      <PackagePath>Humanizer.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.aspnetcore.authorization\6.0.5\lib\net6.0\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
     </AppxPackagedFile>
@@ -744,6 +753,30 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.aspnetcore.metadata\6.0.5\lib\net6.0\Microsoft.AspNetCore.Metadata.dll">
       <PackagePath>Microsoft.AspNetCore.Metadata.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.data.sqlclient\2.1.4\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll">
+      <PackagePath>Microsoft.Data.SqlClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore\6.0.7\lib\net6.0\Microsoft.EntityFrameworkCore.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.abstractions\6.0.7\lib\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.design\6.0.7\lib\net6.0\Microsoft.EntityFrameworkCore.Design.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.relational\6.0.7\lib\net6.0\Microsoft.EntityFrameworkCore.Relational.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.sqlserver\6.0.7\lib\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.SqlServer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.extensions.caching.abstractions\6.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.extensions.caching.memory\6.0.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Memory.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.extensions.configuration\6.0.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -796,6 +829,24 @@
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\lib\net5.0-windows10.0.18362.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identity.client\4.21.1\lib\netcoreapp2.1\Microsoft.Identity.Client.dll">
+      <PackagePath>Microsoft.Identity.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identitymodel.jsonwebtokens\6.8.0\lib\netstandard2.0\Microsoft.IdentityModel.JsonWebTokens.dll">
+      <PackagePath>Microsoft.IdentityModel.JsonWebTokens.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identitymodel.logging\6.8.0\lib\netstandard2.0\Microsoft.IdentityModel.Logging.dll">
+      <PackagePath>Microsoft.IdentityModel.Logging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identitymodel.protocols\6.8.0\lib\netstandard2.0\Microsoft.IdentityModel.Protocols.dll">
+      <PackagePath>Microsoft.IdentityModel.Protocols.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identitymodel.protocols.openidconnect\6.8.0\lib\netstandard2.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <PackagePath>Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.identitymodel.tokens\6.8.0\lib\netstandard2.0\Microsoft.IdentityModel.Tokens.dll">
+      <PackagePath>Microsoft.IdentityModel.Tokens.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.jsinterop\6.0.5\lib\net6.0\Microsoft.JSInterop.dll">
       <PackagePath>Microsoft.JSInterop.dll</PackagePath>
     </AppxPackagedFile>
@@ -804,6 +855,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\6.0.403\lib\net6.0-windows10.0.18362\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
       <PackagePath>Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.win32.systemevents\4.7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll">
+      <PackagePath>Microsoft.Win32.SystemEvents.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.windowsappsdk\1.1.1\lib\net5.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
@@ -838,14 +892,50 @@
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.windowsappsdk\1.1.1\lib\net5.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.configuration.configurationmanager\4.7.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.drawing.common\4.7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll">
+      <PackagePath>System.Drawing.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.identitymodel.tokens.jwt\6.8.0\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.dll">
+      <PackagePath>System.IdentityModel.Tokens.Jwt.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.io.pipelines\6.0.3\lib\net6.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.runtime.caching\4.7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll">
+      <PackagePath>System.Runtime.Caching.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.security.cryptography.protecteddata\4.7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.security.permissions\4.7.0\lib\netcoreapp3.0\System.Security.Permissions.dll">
+      <PackagePath>System.Security.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\system.windows.extensions\4.7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll">
+      <PackagePath>System.Windows.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.data.sqlclient.sni.runtime\2.1.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll">
+      <PackagePath>Microsoft.Data.SqlClient.SNI.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adria\.nuget\packages\microsoft.windowsappsdk\1.1.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Application\bin\Debug\net6.0\SAGOM.Application.dll">
+      <PackagePath>SAGOM.Application.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Domain\bin\Debug\net6.0\SAGOM.Domain.dll">
+      <PackagePath>SAGOM.Domain.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.Data\bin\Debug\net6.0\SAGOM.Infra.Data.dll">
+      <PackagePath>SAGOM.Infra.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.Infra.IoC\bin\Debug\net6.0\SAGOM.Infra.IoC.dll">
+      <PackagePath>SAGOM.Infra.IoC.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projetos Pessoais\SAGOMMVC\SAGOM\SAGOM.MAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\SAGOM.MAUI.deps.json">
       <PackagePath>SAGOM.MAUI.deps.json</PackagePath>

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SAGOM.Application.DTOs;
+using SAGOM.Application.Interfaces;
 using SAGOM.Domain.Entities;
 using SAGOM.Domain.Interfaces;
 using System;

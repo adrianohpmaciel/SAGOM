@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SAGOM.Application.Interfaces;
+using SAGOM.Application.Services;
 using SAGOM.Domain.Entities;
 using SAGOM.Domain.Interfaces;
 using SAGOM.Infra.Data.Context;
@@ -31,8 +33,21 @@ namespace SAGOM.Infra.IoC
             services.AddScoped<IProductServiceOrderRepository, ProductServiceOrderRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IServiceOrderRepository, ServiceOrderRepository>();
+            services.AddScoped<IServiceServiceOrderRepository, ServiceServiceOrderRepository> ();
             services.AddScoped<IToolRepository, ToolRepository>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
+
+            services.AddScoped<IBillService, BillService>();
+            services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<Application.Interfaces.ICostumerService, Application.Services.CostumerService>();
+            services.AddScoped<ICostumerServiceService, CostumerServiceService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IServiceOrderService, ServiceOrderService>();
+            services.AddScoped<IToolService, ToolService>();
+            services.AddScoped<IVehicleService, VehicleService>();
 
             return services;
         }

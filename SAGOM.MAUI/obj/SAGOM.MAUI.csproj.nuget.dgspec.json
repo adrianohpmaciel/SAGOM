@@ -4,6 +4,292 @@
     "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\SAGOM.MAUI.csproj": {}
   },
   "projects": {
+    "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj",
+        "projectName": "SAGOM.Application",
+        "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22330.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj",
+        "projectName": "SAGOM.Domain",
+        "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22330.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\SAGOM.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\SAGOM.Infra.Data.csproj",
+        "projectName": "SAGOM.Infra.Data",
+        "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\SAGOM.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "None",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22330.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj",
+        "projectName": "SAGOM.Infra.IoC",
+        "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj"
+              },
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Domain\\SAGOM.Domain.csproj"
+              },
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\SAGOM.Infra.Data.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.Data\\SAGOM.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22330.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.MAUI\\SAGOM.MAUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -37,19 +323,35 @@
         "frameworks": {
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj"
+              }
+            }
           },
           "net6.0-ios15.4": {
             "targetAlias": "net6.0-ios",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj"
+              }
+            }
           },
           "net6.0-maccatalyst15.4": {
             "targetAlias": "net6.0-maccatalyst",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj"
+              }
+            }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj": {
+                "projectPath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Infra.IoC\\SAGOM.Infra.IoC.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -66,6 +368,10 @@
               "target": "Package",
               "version": "[6.0.408, )",
               "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
@@ -130,6 +436,10 @@
               "version": "[6.0.408, )",
               "autoReferenced": true
             },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.408, )",
@@ -183,6 +493,10 @@
               "target": "Package",
               "version": "[6.0.408, )",
               "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
@@ -238,6 +552,10 @@
               "target": "Package",
               "version": "[6.0.408, )",
               "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",

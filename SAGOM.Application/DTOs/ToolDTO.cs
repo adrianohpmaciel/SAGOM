@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Application.DTOs
 {
-    public sealed class ToolDTO
+    public class ToolDTO
     {
         public int Id { get; private set; }
         public string Name { get; private set; } = null!;
