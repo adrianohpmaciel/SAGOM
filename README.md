@@ -1,2 +1,2 @@
 # SAGOM
-SAGOM - Sistema de Gestão e Atendimento para Oficinas Mecânicas
+SAGOM - Sistema de Atendimento e Gestão para Oficinas Mecânicas
