@@ -41,10 +41,11 @@ namespace SAGOM.Application.Services
             return _mapper.Map<RoleDTO>(roleEntity);
         }
 
-        public async Task Add(RoleDTO role)
+        public async Task<RoleDTO> Add(RoleDTO role)
         {
             var roleEntity = _mapper.Map<Role>(role);
-            await _roleRepository.CreateAsync(roleEntity);
+            roleEntity = await _roleRepository.CreateAsync(roleEntity);
+            return _mapper.Map<RoleDTO>(roleEntity);
         }
 
         public async Task Update(RoleDTO role)
@@ -55,7 +56,7 @@ namespace SAGOM.Application.Services
 
         public async Task Remove(RoleDTO role)
         {
-            var roleEntity = _mapper.Map<Role>(role);
+            Role roleEntity = _mapper.Map<Role>(role);
             await _roleRepository.RemoveAsync(roleEntity);
         }
 

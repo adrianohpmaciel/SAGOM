@@ -35,15 +35,20 @@ namespace SAGOM.WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] RoleDTO role)
         {
-            await _roleService.Add(role);
-
+            role = await _roleService.Add(role);
             return new CreatedAtRouteResult("GetRoleById", new { id = role.Id }, role);
         }
 
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, [FromBody] RoleDTO role)
         {
-            await _roleService.Update(role);
+
+            role.SetId(id);
+
+            if (role != null)
+                await _roleService.Update(role);
+            else
+                return NotFound("Role not founded");
 
             return new CreatedAtRouteResult("GetRoleById", new { id = role.Id }, role);
         }
@@ -51,9 +56,12 @@ namespace SAGOM.WebAPI.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var role = await _roleService.GetRoleById(id); 
+            RoleDTO? role = await _roleService.GetRoleById(id);
 
-            await _roleService.Remove(role);
+            if (role != null)
+                await _roleService.Remove(role);
+            else
+               return NotFound("Role not founded");
 
             return Ok(role);
         }

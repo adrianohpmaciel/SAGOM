@@ -10,7 +10,7 @@ namespace SAGOM.Application.DTOs
     [DisplayName("Cargo")]
     public class RoleDTO
     {
-        public int Id { get; private set; }
+        public int? Id { get; private set; }
         public string Name { get; private set; } = null!;
         public string? Description { get; private set; }
 
@@ -19,5 +19,14 @@ namespace SAGOM.Application.DTOs
             Name = name;
             Description = description;
         }
+
+        public void SetId (int id)
+        {
+            if (Id == null)
+                Id = id;
+            else
+                throw new Exception("Role cannot has your id changed");
+        }
+
     }
 }

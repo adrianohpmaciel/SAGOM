@@ -26,8 +26,8 @@ namespace SAGOM.Infra.Data.Repositories
 
         public async Task<Role> CreateAsync(Role role)
         {
-            _db.Add(role);
-            await _db.SaveChangesAsync();
+            role = _db.Roles.Add(role).Entity;
+            await _db.SaveChangesAsync();           
             return role;
         }
 
@@ -46,16 +46,31 @@ namespace SAGOM.Infra.Data.Repositories
 
         public async Task<Role> RemoveAsync(Role role)
         {
-            _db.Remove(role);
-            await _db.SaveChangesAsync();
-            return role;
+            var roleSelected = await _db.Roles.FindAsync(role.Id);
+
+            if (roleSelected != null)
+            {
+                _db.Roles.Remove(roleSelected);
+                await _db.SaveChangesAsync();
+            }
+
+            return roleSelected;
         }
 
         public async Task<Role> UpdateAsync(Role role)
         {
-            _db.Update(role);
-            await _db.SaveChangesAsync();
-            return role;
+            var roleSelected = await _db.Roles.FindAsync(role.Id);
+
+
+            if (roleSelected != null)
+            {
+                roleSelected.Name = role.Name;
+                roleSelected.Description = role.Description;
+                _db.Update(roleSelected);                
+                await _db.SaveChangesAsync();
+            }
+
+            return roleSelected?? role;
         }
     }
 }
