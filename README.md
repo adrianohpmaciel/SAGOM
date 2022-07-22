@@ -1,2 +1,2 @@
 # SAGOM
-SAGOM - API para Sistema de Atendimento e Gestão para Oficinas Mecânicas
+SAGOM - Sistema de Atendimento e Gestão para Oficinas Mecânicas
