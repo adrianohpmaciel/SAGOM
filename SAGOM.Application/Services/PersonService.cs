@@ -28,6 +28,12 @@ namespace SAGOM.Application.Services
             return _mapper.Map<IEnumerable<PersonDTO>>(personsEntity);
         }
 
+        public async Task<PersonDTO?> GetPersonByEmail(string email)
+        {
+            var personEntity = await _personRepository.GetPersonByEmailAsync(email);
+            return _mapper.Map<PersonDTO>(personEntity);
+        }
+
         public async Task<PersonDTO?> GetPersonByCpf(string cpf)
         {
             var personEntity = await _personRepository.GetPersonByCpfAsync(cpf);

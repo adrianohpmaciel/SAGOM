@@ -19,6 +19,7 @@ namespace SAGOM.Infra.Data.Identity
             _userManager = userManager;
         }
 
+
         public async Task<bool> Authenticate(string email, string password)
         {
             var result = await _signInManager.PasswordSignInAsync(email,

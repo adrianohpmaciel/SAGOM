@@ -10,6 +10,7 @@ namespace SAGOM.Application.DTOs
     public class PersonDTO
     {
         public string Cpf { get; private set; } = null!;
+        public string Email { get; private set; } = null!;
         public string Name { get; private set; } = null!;
         public string LastName { get; private set; } = null!;
         public string Address { get; private set; } = null!;

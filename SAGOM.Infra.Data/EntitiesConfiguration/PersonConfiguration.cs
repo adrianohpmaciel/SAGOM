@@ -17,6 +17,10 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
             builder.HasKey(e => e.Cpf)
                     .HasName("PK__Pessoa__D836E71EE3ED5CB1");
 
+            builder.HasIndex(e => e.Email)
+                    .HasName("UQ__Pessoa__AB6E6164E6B6D964")
+                    .IsUnique();
+
             builder.ToTable("Pessoa");
 
             builder.Property(e => e.Cpf)
@@ -24,6 +28,11 @@ namespace SAGOM.Infra.Data.EntitiesConfiguration
                     .IsUnicode(false)
                     .HasColumnName("cpf")
                     .IsFixedLength();
+
+            builder.Property(e => e.Email)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasColumnName("email");
 
             builder.Property(e => e.Address)
                     .HasMaxLength(100)

@@ -11,7 +11,6 @@ namespace SAGOM.WebAPI.Controllers
     public class RolesController : ControllerBase
     {
         private readonly IRoleService _roleService;
-        private readonly IMapper mapper;
 
         public RolesController(IRoleService roleService)
         {

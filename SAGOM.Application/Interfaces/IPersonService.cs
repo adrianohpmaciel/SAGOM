@@ -10,6 +10,7 @@ namespace SAGOM.Application.Interfaces
     public interface IPersonService
     {
         Task<IEnumerable<PersonDTO>?> GetPersonsByName(string name);
+        Task<PersonDTO?> GetPersonByEmail(string email);
         Task<PersonDTO?> GetPersonByCpf(string cpf);
         Task Add(PersonDTO person);
         Task Update(PersonDTO person);

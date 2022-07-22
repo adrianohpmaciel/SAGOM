@@ -31,6 +31,11 @@ namespace SAGOM.Infra.Data.Repositories
             return await _db.Persons.FindAsync(cpf);
         }
 
+        public async Task<Person?> GetPersonByEmailAsync(string email)
+        {
+            return await _db.Persons.FindAsync(email);
+        }
+
         public async Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name)
         {
             name = name.Trim().ToLower();

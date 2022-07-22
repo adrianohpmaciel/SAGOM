@@ -8,11 +8,6 @@ using SAGOM.Domain.Interfaces;
 using SAGOM.Infra.Data.Context;
 using SAGOM.Infra.Data.Repositories;
 using SAGOM.Infra.Data.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SAGOM.Domain.Account;
 using Microsoft.AspNetCore.Identity;
 
@@ -58,6 +53,7 @@ namespace SAGOM.Infra.IoC
             //services.AddScoped<IVehicleService, VehicleService>();
 
             services.AddScoped<IAuthenticate, AuthenticateService>();
+            services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

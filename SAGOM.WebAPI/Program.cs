@@ -1,3 +1,5 @@
+using SAGOM.Domain.Account;
+using SAGOM.Infra.Data.Identity;
 using SAGOM.Infra.IoC;
 using System.ComponentModel;
 using System.Reflection;
@@ -39,9 +41,10 @@ namespace SAGOM.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            
 
             app.UseHttpsRedirection();
-
+            app.UseRouting();
             app.UseAuthorization();
 
             app.MapControllers();

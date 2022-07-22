@@ -10,6 +10,7 @@ namespace SAGOM.Domain.Entities
     public sealed class Person
     {
         public string Cpf { get; private set; } = null!;
+        public string Email { get; private set; } = null!;
         public string Name { get; private set; } = null!;
         public string LastName { get; private set; } = null!;
         public string Address { get; private set; } = null!;
@@ -17,10 +18,11 @@ namespace SAGOM.Domain.Entities
         public  Costumer? Costumer { get; private set; }
         public  Employee? Employee { get; private set; }
 
-        public Person(string cpf, string name, string lastName, string address, string cellPhone)
+        public Person(string cpf, string email, string name, string lastName, string address, string cellPhone)
         {
             ValidateDomain(ref cpf, ref name, ref lastName, ref address, ref cellPhone);
             Cpf = cpf;
+            Email = email;
             Name = name;
             LastName = name;
             Address = address;

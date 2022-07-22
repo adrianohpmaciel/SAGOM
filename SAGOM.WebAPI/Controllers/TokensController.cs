@@ -1,6 +1,4 @@
-﻿// MACORATTI, JOSÉ CARLOS. Curso Clean Architecture Essencial. Disponível em: https://www.udemy.com/course/clean-architecture-essencial-asp-net-core-com-c/. Acesso em: 20 jul. 2022.
-
-using SAGOM.Domain.Account;
+﻿using SAGOM.Domain.Account;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SAGOM.WebAPI.Models;
@@ -13,9 +11,12 @@ namespace SAGOM.WebAPI.Controllers
     {
         private readonly IAuthenticate _authentication;
 
-        public TokensController(IAuthenticate authenticate)
+        public TokensController(IAuthenticate authentication, ISeedUserRoleInitial seedUserRoleInitial)
         {
-            _authentication = authenticate;
+            _authentication = authentication ??
+                throw new ArgumentNullException(nameof(authentication));
+            //seedUserRoleInitial.SeedUsers();
+            //seedUserRoleInitial.SeedRoles();
         }
 
         [HttpPost("LoginUser")]

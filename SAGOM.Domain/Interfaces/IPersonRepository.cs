@@ -11,6 +11,7 @@ namespace SAGOM.Domain.Interfaces
     {
         Task<IEnumerable<Person>?> GetPersonsByNameAsync(string name);
         Task<Person?> GetPersonByCpfAsync(string cpf);
+        Task<Person?> GetPersonByEmailAsync(string email);
         Task<Person> CreateAsync(Person person);
         Task<Person> UpdateAsync(Person person);
         Task<Person> RemoveAsync(Person person);
