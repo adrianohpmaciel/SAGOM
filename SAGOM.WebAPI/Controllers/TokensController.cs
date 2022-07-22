@@ -2,6 +2,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SAGOM.WebAPI.Models;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace SAGOM.WebAPI.Controllers
 {
@@ -10,11 +14,12 @@ namespace SAGOM.WebAPI.Controllers
     public class TokensController : ControllerBase
     {
         private readonly IAuthenticate _authentication;
-
-        public TokensController(IAuthenticate authentication, ISeedUserRoleInitial seedUserRoleInitial)
+        private readonly IConfiguration _configuration;
+        public TokensController(IAuthenticate authentication, IConfiguration configuration)//, ISeedUserRoleInitial seedUserRoleInitial)
         {
             _authentication = authentication ??
                 throw new ArgumentNullException(nameof(authentication));
+            _configuration = configuration;
             //seedUserRoleInitial.SeedUsers();
             //seedUserRoleInitial.SeedRoles();
         }
@@ -26,8 +31,9 @@ namespace SAGOM.WebAPI.Controllers
 
             if (result)
             {
-                //return GenerateToken(userInfo);
-                return Ok($"User {userInfo.Email} login successfully");
+                UserToken token = GenerateToken(userInfo);
+                return token;
+                //return Ok($"User {userInfo.Email} login successfully");
             }
             else
             {
@@ -36,9 +42,40 @@ namespace SAGOM.WebAPI.Controllers
             }
         }
 
-        private ActionResult<UserToken> GenerateToken(LoginModel userInfo)
+        private UserToken GenerateToken(LoginModel userInfo)
         {
-            throw new NotImplementedException();
+            var claims = new HashSet<Claim>
+            {
+                new Claim("email", userInfo.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+
+            };
+
+            // To obtain private key to submit a token
+            var privateKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
+
+            // To generate the digital key
+            var credentials = new SigningCredentials(privateKey, SecurityAlgorithms.HmacSha256);
+
+            // Time to token expires
+            var timeToExpirateToken = DateTime.UtcNow.AddMinutes(15);
+
+            // To generate token
+            JwtSecurityToken token = new JwtSecurityToken
+                (
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                signingCredentials: credentials
+                );
+
+            return new UserToken()
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Expiration = timeToExpirateToken
+            };
+
+
         }
     }
 }
