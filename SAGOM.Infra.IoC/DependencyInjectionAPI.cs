@@ -7,11 +7,14 @@ using SAGOM.Application.Services;
 using SAGOM.Domain.Interfaces;
 using SAGOM.Infra.Data.Context;
 using SAGOM.Infra.Data.Repositories;
+using SAGOM.Infra.Data.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SAGOM.Domain.Account;
+using Microsoft.AspNetCore.Identity;
 
 namespace SAGOM.Infra.IoC
 {
@@ -23,6 +26,10 @@ namespace SAGOM.Infra.IoC
             services.AddDbContext<SagomDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
             b => b.MigrationsAssembly(typeof(SagomDbContext).Assembly.FullName)));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<SagomDbContext>()
+                .AddDefaultTokenProviders();
 
             //services.AddScoped<IBillRepository, BillRepository>();
             //services.AddScoped<ICompanyRepository, CompanyRepository>();
@@ -49,6 +56,8 @@ namespace SAGOM.Infra.IoC
             //services.AddScoped<IServiceOrderService, ServiceOrderService>();
             //services.AddScoped<IToolService, ToolService>();
             //services.AddScoped<IVehicleService, VehicleService>();
+
+            services.AddScoped<IAuthenticate, AuthenticateService>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

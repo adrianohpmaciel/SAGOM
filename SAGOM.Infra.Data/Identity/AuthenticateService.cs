@@ -1,9 +1,11 @@
-﻿using CleanArchMvc.Domain.Account;
+﻿// MACORATTI, JOSÉ CARLOS. Curso Clean Architecture Essencial. Disponível em: https://www.udemy.com/course/clean-architecture-essencial-asp-net-core-com-c/. Acesso em: 20 jul. 2022.
+
+using SAGOM.Domain.Account;
 using Microsoft.AspNetCore.Identity;
 using SAGOM.Infra.Data.Identity;
 using System.Threading.Tasks;
 
-namespace CleanArchMvc.Infra.Data.Identity
+namespace SAGOM.Infra.Data.Identity
 {
     public class AuthenticateService : IAuthenticate
     {

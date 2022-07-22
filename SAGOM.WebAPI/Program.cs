@@ -10,7 +10,6 @@ namespace SAGOM.WebAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            var buildarar = builder.Configuration.GetConnectionString("\"(\\\"Server=LAPTOP-N8EBDQKA; Database=SagomDb; Trusted_Connection=True;\\\"\"");
             // Add services to the container.
             builder.Services.AddInfrastructureAPI(builder.Configuration);
 
@@ -18,9 +17,18 @@ namespace SAGOM.WebAPI
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddSwaggerGen(c =>
             {
-                c.CustomSchemaIds(x => x.GetCustomAttributes<DisplayNameAttribute>().SingleOrDefault().DisplayName);
+                c.CustomSchemaIds(x =>
+                {
+                    if (x.GetCustomAttributes<DisplayNameAttribute>().SingleOrDefault() != null)
+                    {
+                        return x.GetCustomAttributes<DisplayNameAttribute>().SingleOrDefault().DisplayName;
+                    }
+                    else
+                        return x.Name;
+                });
             });
 
             var app = builder.Build();

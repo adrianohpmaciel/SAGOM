@@ -1,10 +1,12 @@
 ﻿// MACORATTI, JOSÉ CARLOS. Curso Clean Architecture Essencial. Disponível em: https://www.udemy.com/course/clean-architecture-essencial-asp-net-core-com-c/. Acesso em: 20 jul. 2022.
 
-namespace SAGOM.Domain.Account
+using System;
+
+namespace SAGOM.WebAPI.Models
 {
-    public interface ISeedUserRoleInitial
+    public class UserToken
     {
-        void SeedUsers();
-        void SeedRoles();
+        public string Token { get; set; }
+        public DateTime Expiration { get; set; }
     }
 }

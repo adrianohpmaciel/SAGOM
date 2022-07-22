@@ -2,19 +2,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SAGOM.Application.Interfaces;
-using SAGOM.WebAPI.Models;
 using SAGOM.Application.DTOs;
 
 namespace SAGOM.WebAPI.Controllers
 {
     [ApiController]
     [Route("sagomapi/[controller]")]
-    public class CargosController : ControllerBase
+    public class RolesController : ControllerBase
     {
         private readonly IRoleService _roleService;
         private readonly IMapper mapper;
 
-        public CargosController(IRoleService roleService)
+        public RolesController(IRoleService roleService)
         {
             _roleService = roleService;
         }
