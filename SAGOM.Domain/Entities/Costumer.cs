@@ -10,7 +10,7 @@ namespace SAGOM.Domain.Entities
     {
         public int Id { get; private set; }
         public string? Cpf { get; private set; }
-        public Person? CpfNavigation { get; private set; }
+        public Person? CpfNavigation { get; set; }
         public ICollection<CostumerService> CostumerServices { get; private set; }
         public ICollection<Vehicle> Vehicles { get; private set; }
 
@@ -20,5 +20,12 @@ namespace SAGOM.Domain.Entities
             Vehicles = new HashSet<Vehicle>();
         }
 
+        public Costumer(string? cpf, Person? cpfNavigation)
+        {
+            CostumerServices = new HashSet<CostumerService>();
+            Vehicles = new HashSet<Vehicle>();
+            Cpf = cpf;
+            CpfNavigation = cpfNavigation;
+        }
     }
 }

@@ -1,8 +1,10 @@
-using SAGOM.Domain.Account;
+using SAGOM.Domain.AccountInterfaces;
 using SAGOM.Infra.Data.Identity;
-using SAGOM.Infra.IoC;
+//using SAGOM.Infra.IoC;
+using SAGOM.Application;
 using System.ComponentModel;
 using System.Reflection;
+using SAGOM.Application.ServicesInfrastructure;
 
 namespace SAGOM.WebAPI
 {

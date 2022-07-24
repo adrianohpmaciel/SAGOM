@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/DLo4/Y5fx1tbuoCDmqg16XpHpBnXPMUavSS2u1K2J6CvEW+tr0E26wkFe331tpNuhuaJst5BSAiLIz98DQlug==",
+  "dgSpecHash": "FC9HU5iv25iuWweMtqLfghY5bY4C2ncg7cpExEtP4QpTx4gtwX2OCPFizd8XIoUU/5YkYkSEjXFRv20hSwYGPw==",
   "success": true,
   "projectFilePath": "C:\\Projetos Pessoais\\SAGOMMVC\\SAGOM\\SAGOM.Application\\SAGOM.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

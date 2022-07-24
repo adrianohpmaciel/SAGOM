@@ -13,6 +13,7 @@ namespace SAGOM.Application.Mappings
     {
         public DomainToDTOMappingProfile()
         {
+            CreateMap<Authenticate, AuthenticateDTO>().ReverseMap();
             CreateMap<Bill, BillDTO>().ReverseMap();
             CreateMap<Company, CompanyDTO>().ReverseMap();
             CreateMap<Costumer, CostumerDTO>().ReverseMap();

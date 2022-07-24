@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace  SAGOM.Application.Interfaces
+namespace SAGOM.Application.Interfaces.UserInterfaces
 {
     public interface IEmployeeService
     {

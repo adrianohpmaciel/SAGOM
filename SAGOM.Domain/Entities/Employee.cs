@@ -15,7 +15,7 @@ namespace SAGOM.Domain.Entities
         public string? CnpjCompany { get; private set; }
 
         public Company? CnpjCompanyNavigation { get; private set; }
-        public  Person? CpfNavigation { get; private set; }
+        public  Person? CpfNavigation { get; set; }
         public  Role IdRoleNavigation { get; private set; } = null!;
         public ICollection<CostumerService> CostumerServices { get; private set; }
         public ICollection<Tool> Tools { get; private set; }
@@ -24,6 +24,13 @@ namespace SAGOM.Domain.Entities
         {
             CostumerServices = new HashSet<CostumerService>();
             Tools = new HashSet<Tool>();
+        }
+
+        public Employee(Person cpfNavigation)
+        {
+            CostumerServices = new HashSet<CostumerService>();
+            Tools = new HashSet<Tool>();
+            CpfNavigation = cpfNavigation;
         }
 
 

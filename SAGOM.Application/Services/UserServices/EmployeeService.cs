@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using SAGOM.Application.DTOs;
-using SAGOM.Application.Interfaces;
+using SAGOM.Application.Interfaces.UserInterfaces;
 using SAGOM.Domain.Entities;
 using SAGOM.Domain.Interfaces;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SAGOM.Application.Services
+namespace SAGOM.Application.Services.UserServices
 {
     public class EmployeeService : IEmployeeService
     {

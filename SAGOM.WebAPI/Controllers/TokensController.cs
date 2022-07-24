@@ -1,11 +1,12 @@
-﻿using SAGOM.Domain.Account;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SAGOM.WebAPI.Models;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SAGOM.Application.Interfaces.UserInterfaces;
+using SAGOM.Application.DTOs;
 
 namespace SAGOM.WebAPI.Controllers
 {
@@ -13,27 +14,25 @@ namespace SAGOM.WebAPI.Controllers
     [ApiController]
     public class TokensController : ControllerBase
     {
-        private readonly IAuthenticate _authentication;
+        private readonly IAuthenticateService _authentication;
         private readonly IConfiguration _configuration;
-        public TokensController(IAuthenticate authentication, IConfiguration configuration)//, ISeedUserRoleInitial seedUserRoleInitial)
+        public TokensController(IAuthenticateService authentication, IConfiguration configuration)
         {
             _authentication = authentication ??
                 throw new ArgumentNullException(nameof(authentication));
             _configuration = configuration;
-            //seedUserRoleInitial.SeedUsers();
-            //seedUserRoleInitial.SeedRoles();
         }
 
         [HttpPost("LoginUser")]
         public async Task<ActionResult<UserToken>> Login([FromBody] LoginModel userInfo)
         {
-            var result = await _authentication.Authenticate(userInfo.Email, userInfo.Password);
+            AuthenticateDTO auth = new AuthenticateDTO(userInfo.Email, userInfo.Password);
+            var result = await _authentication.Login(auth);
 
             if (result)
             {
                 UserToken token = GenerateToken(userInfo);
                 return token;
-                //return Ok($"User {userInfo.Email} login successfully");
             }
             else
             {
@@ -44,7 +43,7 @@ namespace SAGOM.WebAPI.Controllers
 
         private UserToken GenerateToken(LoginModel userInfo)
         {
-            var claims = new HashSet<Claim>
+            HashSet<Claim> claims = new HashSet<Claim>
             {
                 new Claim("email", userInfo.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
@@ -52,13 +51,13 @@ namespace SAGOM.WebAPI.Controllers
             };
 
             // To obtain private key to submit a token
-            var privateKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
+            SymmetricSecurityKey privateKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
 
             // To generate the digital key
-            var credentials = new SigningCredentials(privateKey, SecurityAlgorithms.HmacSha256);
+            SigningCredentials credentials = new SigningCredentials(privateKey, SecurityAlgorithms.HmacSha256);
 
             // Time to token expires
-            var timeToExpirateToken = DateTime.UtcNow.AddMinutes(15);
+            DateTime timeToExpirateToken = DateTime.UtcNow.AddMinutes(15);
 
             // To generate token
             JwtSecurityToken token = new JwtSecurityToken
@@ -69,11 +68,11 @@ namespace SAGOM.WebAPI.Controllers
                 signingCredentials: credentials
                 );
 
-            return new UserToken()
-            {
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = timeToExpirateToken
-            };
+            return new UserToken
+                (
+                    new JwtSecurityTokenHandler().WriteToken(token),
+                    timeToExpirateToken
+                );
 
 
         }

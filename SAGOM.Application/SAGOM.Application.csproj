@@ -16,8 +16,4 @@
     <ProjectReference Include="..\SAGOM.Infra.Data\SAGOM.Infra.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
 </Project>

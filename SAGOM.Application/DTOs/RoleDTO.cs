@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace SAGOM.Application.DTOs
 {
-    [DisplayName("Role")]
     public class RoleDTO
     {
-        [Required(ErrorMessage = "Id is required")]
         public int? Id { get; private set; }
         public string Name { get; private set; } = null!;
         public string? Description { get; private set; }
