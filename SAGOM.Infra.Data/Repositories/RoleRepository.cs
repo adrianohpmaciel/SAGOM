@@ -44,6 +44,20 @@ namespace SAGOM.Infra.Data.Repositories
                                                       ).ToListAsync();
         }
 
+        public async Task<bool> RemoveByNameAsync(string name)
+        {
+            name = name.Trim().ToLower();
+            IEnumerable<Role> roles = await _db.Roles.Where(p => p.Name.ToLower().StartsWith(name)).ToListAsync();
+
+            foreach (Role role in roles)
+            {
+                _db.Roles.Remove(role);
+                await _db.SaveChangesAsync();
+            }
+
+            return true;
+        }
+
         public async Task<Role> RemoveAsync(Role role)
         {
             var roleSelected = await _db.Roles.FindAsync(role.Id);

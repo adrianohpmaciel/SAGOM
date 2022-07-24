@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SAGOM.Application.Interfaces;
 using SAGOM.Application.DTOs;
+using SAGOM.WebAPI.Models;
+using System.Xml.Linq;
+using SAGOM.Domain.Entities;
 
 namespace SAGOM.WebAPI.Controllers
 {
@@ -16,51 +19,80 @@ namespace SAGOM.WebAPI.Controllers
         }
 
         [HttpGet(Name = "GetRoles")]
-        public async Task<ActionResult<IEnumerable<RoleDTO>?>> Get()
+        public async Task<ActionResult<IEnumerable<CargoModel>?>> Get()
         {
-            return Ok(await _roleService.GetAllRoles());
+
+            IEnumerable<RoleDTO> roles = await _roleService.GetAllRoles();
+            List<CargoModel> cargoModels = new List<CargoModel>();
+            foreach (RoleDTO roleDTO in roles)
+            {
+                cargoModels.Add(new CargoModel(roleDTO));
+            }
+
+            return (Ok(cargoModels));
 
         }
 
         [HttpGet("{id:int}", Name = "GetRoleById")]
-        public async Task<ActionResult<RoleDTO?>> Get(int id)
+        public async Task<ActionResult<CargoModel>> Get(int id)
         {
-            return Ok(await _roleService.GetRoleById(id));
+            return Ok(new CargoModel(await _roleService.GetRoleById(id)));
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post([FromBody] RoleDTO role)
+        [HttpPost(Name = "CreateRole")]
+        public async Task<ActionResult<CargoModel>> Post([FromBody]CargoModel role)
         {
-            role = await _roleService.Add(role);
-            return new CreatedAtRouteResult("GetRoleById", new { id = role.Id }, role);
+            RoleDTO roleDTO = new RoleDTO(role.Nome, role.Descricao);
+
+            roleDTO = await _roleService.Add(roleDTO);
+
+
+            return Ok(new CargoModel(await _roleService.GetRoleById(roleDTO.Id.GetValueOrDefault())));
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, [FromBody] RoleDTO role)
+        public async Task<ActionResult<CargoModel>> Put(int id, [FromBody] CargoModel role)
         {
 
             role.SetId(id);
 
             if (role != null)
-                await _roleService.Update(role);
+                await _roleService.Update(role.DTO);
             else
                 return NotFound("Role not founded");
 
             return new CreatedAtRouteResult("GetRoleById", new { id = role.Id }, role);
         }
 
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        [HttpDelete("{id:int}", Name = "DeleteRole")]
+        public async Task<ActionResult<CargoModel>> Delete(int id)
         {
             RoleDTO? role = await _roleService.GetRoleById(id);
 
             if (role != null)
                 await _roleService.Remove(role);
             else
-               return NotFound("Role not founded");
+                return NotFound("Role not founded");
 
-            return Ok(role);
+            return Ok(new CargoModel(role));
         }
+
+        [HttpDelete("{nome}", Name = "DeleteRoleByName")]
+        public async Task<ActionResult> Delete(string nome)
+        {
+            try
+            {
+                await _roleService.RemoveByName(nome);
+                return Ok("Remoção concluída con sucesso");
+
+            }
+            catch
+            {
+                return NotFound("Role not founded");
+            }
+
+        }
+
 
 
     }

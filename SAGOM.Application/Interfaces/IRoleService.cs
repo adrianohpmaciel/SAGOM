@@ -15,5 +15,6 @@ namespace SAGOM.Application.Interfaces
         Task<RoleDTO> Add(RoleDTO role);
         Task Update(RoleDTO role);
         Task Remove(RoleDTO role);
+        Task RemoveByName(string name);
     }
 }

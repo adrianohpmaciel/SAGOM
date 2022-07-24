@@ -9,6 +9,7 @@ namespace SAGOM.Domain.AccountInterfaces
         Task<bool> RegisterUser(Costumer costumer, Authenticate authenticate);
         Task<bool> RegisterUser(Employee employee, Authenticate authenticate);
         Task<bool> RegisterRole(string name);
+        Task<bool> RemoveRole(string name);
         Task Logout();
 
     }

@@ -15,9 +15,10 @@ namespace SAGOM.Infra.Data.Repositories
         private readonly IPersonRepository _personRepository;
         private readonly ICostumerRepository _costumerRepository;
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly IRoleRepository _roleRepository;
 
         public AuthenticateRepository(SignInManager<ApplicationUser> signInManager,
-            UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IPersonRepository personRepository, ICostumerRepository costumerRepository, IEmployeeRepository employeeRepository)
+            UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IPersonRepository personRepository, ICostumerRepository costumerRepository, IEmployeeRepository employeeRepository, IRoleRepository roleRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -25,6 +26,7 @@ namespace SAGOM.Infra.Data.Repositories
             _personRepository = personRepository;
             _costumerRepository = costumerRepository;
             _employeeRepository = employeeRepository;
+            _roleRepository = roleRepository;
         }
 
         public async Task<bool> UserExists(Costumer costumer)
@@ -50,7 +52,7 @@ namespace SAGOM.Infra.Data.Repositories
         public async Task<bool> RegisterUser(Employee employee, Authenticate authenticate)
         {
             if (await UserExists(employee))
-                return false;
+                throw new Exception("This employee already in system");
 
             var applicationUser = new ApplicationUser
             {
@@ -59,7 +61,7 @@ namespace SAGOM.Infra.Data.Repositories
             };
 
             if (!CheckExistenceRoleByName(authenticate.RoleName).Result)
-                return false;
+                throw new Exception("The selected role dont exists in system");
 
             var result = await _userManager.CreateAsync(applicationUser, authenticate.Password);
 
@@ -68,6 +70,15 @@ namespace SAGOM.Infra.Data.Repositories
                 await _userManager.AddToRoleAsync(applicationUser, authenticate.RoleName.Trim().ToLower());
                 var person = await _personRepository.CreateAsync(employee.CpfNavigation);
                 employee.CpfNavigation = person;
+                IEnumerable<Role> roles = await _roleRepository.GetRolesByNameAsync(authenticate.RoleName);
+
+                if (roles == null || roles.Count() == 0)
+                    throw new Exception("The selected role dont exists in client system");
+                else if (roles.Count() > 1)
+                    throw new Exception("Duplicated roles exists in client system");
+
+                employee.SetRole(roles.First());
+
                 await _employeeRepository.CreateAsync(employee);
 
                 await _signInManager.SignInAsync(applicationUser, isPersistent: false);
@@ -106,7 +117,7 @@ namespace SAGOM.Infra.Data.Repositories
         }
         #endregion
 
-        public async Task<bool> CheckExistenceRoleByName(string name)
+        private async Task<bool> CheckExistenceRoleByName(string name)
         {
             var exists = await _roleManager.RoleExistsAsync(name.Trim().ToLower());
             return exists;
@@ -130,6 +141,21 @@ namespace SAGOM.Infra.Data.Repositories
             return false;
 
         }
+
+        public async Task<bool> RemoveRole(string name)
+        {
+            IdentityRole role = new IdentityRole();
+            role.Name = name.Trim().ToLower();
+            role.NormalizedName = name.Trim().ToUpper();
+
+            var testingDelete = await _roleManager.FindByNameAsync(role.Name);
+            if (testingDelete != null) 
+                  await _roleManager.DeleteAsync(testingDelete);
+
+
+            return true;
+        }
+
         #endregion
     }
 }

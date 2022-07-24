@@ -2,12 +2,12 @@
 
 namespace SAGOM.WebAPI.Models
 {
-    public class UserToken
+    public class UserTokenModel
     {
         public string Token { get; private set; }
         public DateTime Expiration { get; private set; }
 
-        public UserToken(string token, DateTime expiration)
+        public UserTokenModel(string token, DateTime expiration)
         {
             Token = token;
             Expiration = expiration;

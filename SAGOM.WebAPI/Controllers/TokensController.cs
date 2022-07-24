@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using SAGOM.Application.Interfaces.UserInterfaces;
 using SAGOM.Application.DTOs;
+using SAGOM.Domain.Entities;
 
 namespace SAGOM.WebAPI.Controllers
 {
@@ -24,14 +25,14 @@ namespace SAGOM.WebAPI.Controllers
         }
 
         [HttpPost("LoginUser")]
-        public async Task<ActionResult<UserToken>> Login([FromBody] LoginModel userInfo)
+        public async Task<ActionResult<UserTokenModel>> Login([FromBody] LoginModel userInfo)
         {
             AuthenticateDTO auth = new AuthenticateDTO(userInfo.Email, userInfo.Password);
             var result = await _authentication.Login(auth);
 
             if (result)
             {
-                UserToken token = GenerateToken(userInfo);
+                UserTokenModel token = GenerateToken(userInfo);
                 return token;
             }
             else
@@ -52,12 +53,11 @@ namespace SAGOM.WebAPI.Controllers
             try
             {
                 result = await _authentication.SignUp(costumer, authDTO);
-            } 
+            }
             catch
             {
                 return BadRequest("Informações inválidas.");
             }
-            
 
             if (result)
             {
@@ -69,7 +69,35 @@ namespace SAGOM.WebAPI.Controllers
             }
         }
 
-        private UserToken GenerateToken(LoginModel userInfo)
+        [HttpPost("CreateEmployee")]
+        public async Task<ActionResult> CreateEmployee([FromBody] ColaboradorCadastroModel auth)
+        {
+            AuthenticateDTO authDTO = new AuthenticateDTO(auth.Email, auth.Password, auth.NomeCargo);
+
+            EmployeeDTO employee = new EmployeeDTO(new PersonDTO(auth.Cpf, auth.Email, auth.Nome, auth.SobreNome, auth.Endereco, auth.Celular));
+
+            var result = false;
+
+            try
+            {
+                result = await _authentication.SignUp(employee, authDTO);
+            }
+            catch
+            {
+                return  NotFound("Falha ao tentar realizar o cadastro");
+            }
+
+            if (result)
+            {
+                return Ok("Cliente cadastrado com sucesso.");
+            }
+            else
+            {
+                return BadRequest("Informações inválidas.");
+            }
+        }
+
+        private UserTokenModel GenerateToken(LoginModel userInfo)
         {
             HashSet<Claim> claims = new HashSet<Claim>
             {
@@ -96,7 +124,7 @@ namespace SAGOM.WebAPI.Controllers
                 signingCredentials: credentials
                 );
 
-            return new UserToken
+            return new UserTokenModel
                 (
                     new JwtSecurityTokenHandler().WriteToken(token),
                     timeToExpirateToken

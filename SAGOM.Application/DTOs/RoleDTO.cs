@@ -14,6 +14,11 @@ namespace SAGOM.Application.DTOs
         public string Name { get; private set; } = null!;
         public string? Description { get; private set; }
 
+        public RoleDTO()
+        {
+
+        }
+
         public RoleDTO(string name, string? description)
         {
             Name = name;

@@ -121,9 +121,11 @@ namespace SAGOM.Domain.Entities
             if (firstDigitObtained != firstDigit)
                 return false;
 
+            cpfSum = 0;
+
             for (int count = 1; count < 11; count++)
             {
-                cpfSum += cpfNumbers[count - 1] * count - 1;
+                cpfSum += cpfNumbers[count - 1] * (count - 1);
             }
 
             secondDigitObtained = cpfSum % 11;

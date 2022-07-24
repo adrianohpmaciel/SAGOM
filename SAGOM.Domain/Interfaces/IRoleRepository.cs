@@ -15,5 +15,6 @@ namespace SAGOM.Domain.Interfaces
         Task<Role> CreateAsync(Role role);
         Task<Role> UpdateAsync(Role role);
         Task<Role> RemoveAsync(Role role);
+        Task<bool> RemoveByNameAsync(string name);
     }
 }
