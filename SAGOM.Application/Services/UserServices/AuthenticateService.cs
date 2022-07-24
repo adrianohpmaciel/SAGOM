@@ -30,6 +30,15 @@ namespace SAGOM.Application.Services.UserServices
         }
         public async Task<bool> SignUp(CostumerDTO costumer, AuthenticateDTO authenticate)
         {
+            try
+            {
+                var asASas = _mapper.Map<Costumer>(costumer);
+
+            }
+            catch (Exception falhatosca)
+            {
+
+            }
             var realCostumer = _mapper.Map<Costumer>(costumer);
             var realAuthenticate = _mapper.Map<Authenticate>(authenticate);
             return await _authenticateRepository.RegisterUser(realCostumer, realAuthenticate);

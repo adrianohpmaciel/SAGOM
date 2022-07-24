@@ -1,26 +1,30 @@
-﻿namespace SAGOM.WebAPI.Models
+﻿using SAGOM.Application.DTOs;
+
+namespace SAGOM.WebAPI.Models
 {
     public class FerramentaModel
     {
         public int Id { get; private set; }
         public string Nome { get; private set; }
-        public string Descricao { get; private set; }
-        public double Valor { get; private set; }
-        public DateTime DataDeCompra { get; private set; }
-        public DateTime DataDeDescarte { get; private set; }
+        public string? Descricao { get; private set; }
+        public decimal? Valor { get; private set; }
+        public DateTime? DataDeCompra { get; private set; }
+        public DateTime? DataDeDescarte { get; private set; }
         public string Status { get; private set; }
-        public ColaboradorModel Responsavel { get; set; }
+        public ColaboradorModel Responsavel { get; private set; }
+        public ToolDTO DTO { get; private set; }
 
-        public FerramentaModel(int id, string nome, string descricao, double valor, DateTime dataDeCompra, DateTime dataDeDescarte, string status, ColaboradorModel responsavel)
+        public FerramentaModel(ToolDTO tool, EmployeeDTO responsavel)
         {
-            Id = id;
-            Nome = nome;
-            Descricao = descricao;
-            Valor = valor;
-            DataDeCompra = dataDeCompra;
-            DataDeDescarte = dataDeDescarte;
-            Status = status;
-            Responsavel = responsavel;  
+            Id = tool.Id;
+            Nome = tool.Name;
+            Descricao = tool.Description;
+            Valor = tool.Price;
+            DataDeCompra = tool.PurchaseDate;
+            DataDeDescarte = tool.DiscardDate ;
+            Status = tool.Status;
+            Responsavel = new ColaboradorModel(responsavel);
+            DTO = tool;
         }
 
         public void RegistrarDescarte()

@@ -11,6 +11,11 @@ namespace SAGOM.WebAPI.Models
         public string? Descricao { get; private set; }
         public RoleDTO DTO { get; private set; }
 
+        public CargoModel(int? id)
+        {
+            Id = id;
+        }
+
         public CargoModel(RoleDTO role)
         {
             DTO = role;

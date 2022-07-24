@@ -34,7 +34,7 @@ namespace SAGOM.Domain.Validations
 
         public static bool IsOnlyLetters(string letters)
         {
-            letters = letters.Trim();
+            letters = letters.Trim().Replace(" ", "");
             string filteredLetters = GetOnlyLetters(letters);
 
             if (filteredLetters.Length == 0 || filteredLetters.Length != letters.Length)

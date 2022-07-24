@@ -15,6 +15,16 @@ namespace SAGOM.Application.DTOs
         public string LastName { get; private set; } = null!;
         public string Address { get; private set; } = null!;
         public string CellPhone { get; private set; } = null!;
+
+        public PersonDTO(string cpf, string email, string name, string lastName, string address, string cellPhone)
+        {
+            Cpf = cpf;
+            Email = email;
+            Name = name;
+            LastName = lastName;
+            Address = address;
+            CellPhone = cellPhone;
+        }
     }
 
 }

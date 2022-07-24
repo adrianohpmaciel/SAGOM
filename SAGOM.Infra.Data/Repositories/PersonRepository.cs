@@ -21,7 +21,15 @@ namespace SAGOM.Infra.Data.Repositories
 
         public async Task<Person> CreateAsync(Person person)
         {
-            _db.Add(person);
+            try
+            {
+                _db.Add(person);
+
+            }
+            catch (Exception testeDoToto)
+            {
+
+            }
             await _db.SaveChangesAsync();
             return person;
         }

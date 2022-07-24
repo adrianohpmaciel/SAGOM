@@ -12,5 +12,6 @@
         public string Status { get; private set; }
         public List<OrdemDeServicoModel> OrdemDeServicoModels { get; private set; }
         public ContaModel? conta { get; private set; }
+
     }
 }

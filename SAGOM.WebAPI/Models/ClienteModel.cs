@@ -1,16 +1,24 @@
-﻿namespace SAGOM.WebAPI.Models
+﻿using SAGOM.Application.DTOs;
+
+namespace SAGOM.WebAPI.Models
 {
     public class ClienteModel
     {
-        public int Id { get; private set; }
+        public int? Id { get; private set; } = null;
         public PessoaModel Pessoa { get; private set; }
-        public VeiculoModel[] Veiculos { get; private set; }
+        public List<VeiculoModel>? Veiculos { get; private set; } = null;
 
-        public ClienteModel(int id, PessoaModel pessoa, VeiculoModel[] veiculos)
+        public ClienteModel(PersonDTO pessoa)
         {
-            Id = id;
-            Pessoa = pessoa;
-            Veiculos = veiculos;
+            Pessoa = new PessoaModel(pessoa);
+        }
+
+        public void AddVeiculo(VeiculoModel veiculo)
+        {
+            if (Veiculos == null)
+                Veiculos = new List<VeiculoModel>();
+
+            Veiculos.Add(veiculo);
         }
     }
 }

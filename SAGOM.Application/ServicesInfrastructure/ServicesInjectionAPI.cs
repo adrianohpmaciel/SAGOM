@@ -18,7 +18,8 @@ namespace SAGOM.Application.ServicesInfrastructure
             services.AddReposirotiesInfrastructureAPI(configuration);
 
             //services.AddScoped<IBillService, BillService>();
-            //services.AddScoped<Application.Interfaces.ICostumerService, Application.Services.CostumerService>();
+            //services.AddScoped<Application.Interfaces.ICostumerService, Application.S
+            //services.CostumerService>();
             //services.AddScoped<ICostumerServiceService, CostumerServiceService>();
             services.AddScoped<ICostumerService, CostumerService>();
             services.AddScoped<IPersonService, PersonService>();

@@ -1,18 +1,21 @@
-﻿namespace SAGOM.WebAPI.Models
+﻿using SAGOM.Application.DTOs;
+
+namespace SAGOM.WebAPI.Models
 {
     public class ColaboradorModel
     {
-        public int Id { get; private set; }
+        public int? Id { get; private set; }
         public CargoModel Cargo { get; private set; }
         public PessoaModel Pessoa { get; private set; }
-        public double Salario { get; private set; }
+        public decimal? Salario { get; private set; }
+        public EmployeeDTO DTO { get; private set; }
 
-        public ColaboradorModel(int id, CargoModel cargo, PessoaModel pessoa, double salario)
+        public ColaboradorModel(EmployeeDTO dto)
         {
-            Id = id;
-            Cargo = cargo;
-            Pessoa = pessoa;
-            Salario = salario;
+            Id = dto.Id;
+            Cargo = new CargoModel(dto.IdRole);
+            Pessoa = new PessoaModel(dto.Cpf);
+            Salario = dto.Salary;
         }
 
     }

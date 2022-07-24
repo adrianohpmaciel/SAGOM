@@ -41,6 +41,34 @@ namespace SAGOM.WebAPI.Controllers
             }
         }
 
+        [HttpPost("CreateCostumer")]
+        public async Task<ActionResult> CreateCostumer([FromBody] ClienteCadastroModel auth)
+        {
+            AuthenticateDTO authDTO = new AuthenticateDTO(auth.Email, auth.Password);
+            CostumerDTO costumer = new CostumerDTO(auth.Cpf, new PersonDTO(auth.Cpf, auth.Email, auth.Nome, auth.SobreNome, auth.Endereco, auth.Celular));
+
+            var result = false;
+
+            try
+            {
+                result = await _authentication.SignUp(costumer, authDTO);
+            } 
+            catch
+            {
+                return BadRequest("Informações inválidas.");
+            }
+            
+
+            if (result)
+            {
+                return Ok("Cliente cadastrado com sucesso.");
+            }
+            else
+            {
+                return BadRequest("Informações inválidas.");
+            }
+        }
+
         private UserToken GenerateToken(LoginModel userInfo)
         {
             HashSet<Claim> claims = new HashSet<Claim>
