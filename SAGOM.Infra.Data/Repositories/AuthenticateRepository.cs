@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using SAGOM.Infra.Data.Identity;
 using System.Threading.Tasks;
 using SAGOM.Domain.Entities;
+using SAGOM.Domain.Interfaces;
 
 namespace SAGOM.Infra.Data.Repositories
 {
@@ -11,12 +12,12 @@ namespace SAGOM.Infra.Data.Repositories
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly PersonRepository _personRepository;
-        private readonly CostumerRepository _costumerRepository;
-        private readonly EmployeeRepository _employeeRepository;
+        private readonly IPersonRepository _personRepository;
+        private readonly ICostumerRepository _costumerRepository;
+        private readonly IEmployeeRepository _employeeRepository;
 
         public AuthenticateRepository(SignInManager<ApplicationUser> signInManager,
-            UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, PersonRepository personRepository, CostumerRepository costumerRepository, EmployeeRepository employeeRepository)
+            UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IPersonRepository personRepository, ICostumerRepository costumerRepository, IEmployeeRepository employeeRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;

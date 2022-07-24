@@ -24,11 +24,11 @@ namespace SAGOM.Infra.Data.RepositoriesInfrastructure
                 .AddEntityFrameworkStores<SagomDbContext>()
                 .AddDefaultTokenProviders();
 
-            //services.AddScoped<IBillRepository, BillRepository>();            
-            //services.AddScoped<ICostumerRepository, CostumerRepository>();
-            //services.AddScoped<ICostumerServiceRepository, CostumerServiceRepository>();
+            //services.AddScoped<IBillRepository, BillRepository>();
             services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<ICostumerRepository, CostumerRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            //services.AddScoped<ICostumerServiceRepository, CostumerServiceRepository>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
             //services.AddScoped<IProductRepository, ProductRepository>();
             //services.AddScoped<IProductServiceOrderRepository, ProductServiceOrderRepository>();

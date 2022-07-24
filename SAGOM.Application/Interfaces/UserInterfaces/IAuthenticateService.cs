@@ -12,8 +12,8 @@ namespace SAGOM.Application.Interfaces.UserInterfaces
     public interface IAuthenticateService
     {
         Task<bool> Login(AuthenticateDTO authenticate);
-        Task<bool> SignUp(Employee employee, AuthenticateDTO authenticate);
-        Task<bool> SignUp(Costumer costumer, AuthenticateDTO authenticate);
+        Task<bool> SignUp(EmployeeDTO employee, AuthenticateDTO authenticate);
+        Task<bool> SignUp(CostumerDTO costumer, AuthenticateDTO authenticate);
         Task Logout();
         Task<bool> AddRole(string name);
     }

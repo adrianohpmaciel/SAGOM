@@ -20,6 +20,7 @@ namespace SAGOM.Application.ServicesInfrastructure
             //services.AddScoped<IBillService, BillService>();
             //services.AddScoped<Application.Interfaces.ICostumerService, Application.Services.CostumerService>();
             //services.AddScoped<ICostumerServiceService, CostumerServiceService>();
+            services.AddScoped<ICostumerService, CostumerService>();
             services.AddScoped<IPersonService, PersonService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<ICompanyService, CompanyService>();

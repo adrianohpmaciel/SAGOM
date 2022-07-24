@@ -22,15 +22,17 @@ namespace SAGOM.Application.Services.UserServices
             var realAuthenticate = _mapper.Map<Authenticate>(authenticate);
             return await _authenticateRepository.Authenticate(realAuthenticate);
         }
-        public async Task<bool> SignUp(Employee employee, AuthenticateDTO authenticate)
+        public async Task<bool> SignUp(EmployeeDTO employee, AuthenticateDTO authenticate)           
         {
+            var realEmployee = _mapper.Map<Employee>(employee);
             var realAuthenticate = _mapper.Map<Authenticate>(authenticate);
-            return await _authenticateRepository.RegisterUser(employee, realAuthenticate);
+            return await _authenticateRepository.RegisterUser(realEmployee, realAuthenticate);
         }
-        public async Task<bool> SignUp(Costumer costumer, AuthenticateDTO authenticate)
+        public async Task<bool> SignUp(CostumerDTO costumer, AuthenticateDTO authenticate)
         {
+            var realCostumer = _mapper.Map<Costumer>(costumer);
             var realAuthenticate = _mapper.Map<Authenticate>(authenticate);
-            return await _authenticateRepository.RegisterUser(costumer, realAuthenticate);
+            return await _authenticateRepository.RegisterUser(realCostumer, realAuthenticate);
         }
         public async Task Logout()
         {
