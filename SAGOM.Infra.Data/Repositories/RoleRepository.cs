@@ -66,9 +66,10 @@ namespace SAGOM.Infra.Data.Repositories
             {
                 _db.Roles.Remove(roleSelected);
                 await _db.SaveChangesAsync();
+                return roleSelected;
             }
 
-            return roleSelected;
+            return role;
         }
 
         public async Task<Role> UpdateAsync(Role role)

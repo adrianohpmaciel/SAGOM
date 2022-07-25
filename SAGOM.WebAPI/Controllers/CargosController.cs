@@ -4,6 +4,7 @@ using SAGOM.Application.DTOs;
 using SAGOM.WebAPI.Models;
 using System.Xml.Linq;
 using SAGOM.Domain.Entities;
+using Newtonsoft.Json;
 
 namespace SAGOM.WebAPI.Controllers
 {
@@ -50,18 +51,20 @@ namespace SAGOM.WebAPI.Controllers
             return Ok(new CargoModel(await _roleService.GetRoleById(roleDTO.Id.GetValueOrDefault())));
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult<CargoModel>> Put(int id, [FromBody] CargoModel role)
+        [HttpPut("UpdateRoleDescription/{id:int}")]
+        public async Task<ActionResult<CargoModel>> Put(int id, [FromBody][JsonProperty("Descricao")] string? descricao)
         {
+            RoleDTO? roleToUpdate = await _roleService.GetRoleById(id);
 
-            role.SetId(id);
-
-            if (role != null)
-                await _roleService.Update(role.DTO);
+            if (roleToUpdate != null)
+            {
+                roleToUpdate.Description = descricao;
+                await _roleService.Update(roleToUpdate);
+            }                
             else
                 return NotFound("Role not founded");
 
-            return new CreatedAtRouteResult("GetRoleById", new { id = role.Id }, role);
+            return new CreatedAtRouteResult("GetRoleById", new { id = roleToUpdate.Id }, roleToUpdate);
         }
 
         [HttpDelete("{id:int}", Name = "DeleteRole")]
